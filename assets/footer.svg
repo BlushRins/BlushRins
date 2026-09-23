@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="58" viewBox="0 0 1000 58" role="img" aria-label="Decorative blue divider">
+<defs><linearGradient id="line"><stop stop-color="#819CC9" stop-opacity="0"/><stop offset=".5" stop-color="#819CC9" stop-opacity=".4"/><stop offset="1" stop-color="#819CC9" stop-opacity="0"/></linearGradient></defs>
+<style>.star{transform-origin:500px 29px;animation:glow 5s ease-in-out infinite}@keyframes glow{50%{opacity:.4;transform:scale(.85)}}@media(prefers-reduced-motion:reduce){.star{animation:none}}</style>
+<path d="M70 29H471M529 29H930" stroke="url(#line)"/>
+<path class="star" d="M500 20L502.5 26.5L509 29L502.5 31.5L500 38L497.5 31.5L491 29L497.5 26.5Z" fill="#829EF6"/>
+<circle cx="481" cy="29" r="1.5" fill="#829EF6" opacity=".5"/><circle cx="519" cy="29" r="1.5" fill="#829EF6" opacity=".5"/>
+</svg>
