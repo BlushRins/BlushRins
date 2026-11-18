@@ -1,21 +1,15 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/header-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/header-light.svg">
-    <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/header-dark.svg" alt="BlushRins" width="100%">
-  </picture>
-</p>
+![BlushRins — software and study notes](./assets/profile.svg)
 
-<h3 align="center">Languages I use</h3>
+I build small tools for my workouts and coursework. Two of them live here.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/c.svg" alt="C" width="98" height="42">
-  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/java.svg" alt="Java" width="119" height="42">
-  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/php.svg" alt="PHP" width="112" height="42">
-  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/html.svg" alt="HTML" width="126" height="42">
-  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/css.svg" alt="CSS" width="110" height="42">
-</p>
+### Lift Tracker
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/footer.svg" alt="" width="100%">
-</p>
+Between sets, I want to know what I lifted last time and what to aim for next. Lift Tracker keeps that on one screen, logs sets offline, and stores the history on the device.
+
+[Open Lift Tracker](https://blushrins.github.io/lift-tracker/) · [Source code](https://github.com/BlushRins/lift-tracker)
+
+### Study Hub
+
+I keep my data structures notes in Obsidian. Study Hub turns those same Markdown files into a web reader, with linked definitions, code examples, and diagrams. The bit-vector notes walk through how a set fits into a handful of bits.
+
+[Read the bit-vector notes](https://github.com/BlushRins/Studyhub/blob/HEAD/content/Bit-Vector%20Sets.md) · [Explore Study Hub](https://github.com/BlushRins/Studyhub)

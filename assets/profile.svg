@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="240" viewBox="0 0 1080 240" role="img" aria-labelledby="title desc">
+  <title id="title">BlushRins — software and study notes</title>
+  <desc id="desc">An ink wordmark on blush paper beside three linked nodes drawn on a dot grid.</desc>
+  <defs>
+    <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="1.25" fill="#b5828b"/>
+    </pattern>
+    <g id="node" stroke="#36202b" stroke-width="2">
+      <rect x="4" y="5" width="82" height="44" rx="4" fill="#36202b"/>
+      <rect width="82" height="44" rx="4" fill="#fff2e8"/>
+      <path d="M53 0v44" fill="none"/>
+      <circle cx="68" cy="22" r="4" fill="#36202b" stroke="none"/>
+    </g>
+  </defs>
+  <rect width="1080" height="240" rx="12" fill="#f3d7d9"/>
+  <path d="M594 20v200" stroke="#c59ca4"/>
+  <rect x="603" y="16" width="458" height="208" fill="url(#dots)"/>
+  <text x="48" y="139" fill="#33202a" font-family="Georgia,'Liberation Serif',serif" font-size="102" letter-spacing="-5">Blush<tspan font-style="italic">Rins</tspan></text>
+  <text x="54" y="185" fill="#663e4c" font-family="ui-monospace,monospace" font-size="19" letter-spacing="1.2">Software &amp; study notes</text>
+  <use href="#node" x="634" y="134"/>
+  <use href="#node" x="792" y="93"/>
+  <use href="#node" x="950" y="52"/>
+  <g fill="none" stroke="#36202b" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M702 156h52v-41h30m-8-6 8 6-8 6"/>
+    <path d="M860 115h52V74h30m-8-6 8 6-8 6"/>
+    <path d="M1018 74h28m-5-7v14"/>
+  </g>
+  <g fill="#995064">
+    <rect x="647" y="147" width="7" height="19" rx="1"/>
+    <rect x="805" y="106" width="7" height="19" rx="1"/>
+    <rect x="817" y="106" width="7" height="19" rx="1"/>
+    <rect x="963" y="65" width="7" height="19" rx="1"/>
+    <rect x="975" y="65" width="7" height="19" rx="1"/>
+    <rect x="987" y="65" width="7" height="19" rx="1"/>
+  </g>
+</svg>
