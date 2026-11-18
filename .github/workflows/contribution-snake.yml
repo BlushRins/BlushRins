@@ -1,0 +1,55 @@
+name: Refresh contribution snake
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 20 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-snake
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Trace the contribution calendar
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?color_snake=#f7b5ca&color_dots=#3b3444,#446b5a,#689777,#96c99b,#c6ecb8
+
+      - name: Match the workbench colors and make a still calendar
+        shell: python
+        run: |
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          ET.register_namespace("", "http://www.w3.org/2000/svg")
+          path = Path("dist/snake.svg")
+          tree = ET.parse(path)
+          svg = tree.getroot()
+          x, y, width, height = svg.attrib["viewBox"].split()
+          panel = ET.Element("{http://www.w3.org/2000/svg}rect", {
+              "x": x, "y": y, "width": width, "height": height,
+              "rx": "10", "fill": "#251f2d",
+          })
+          svg.insert(0, panel)
+          tree.write(path, encoding="utf-8")
+
+          style = ET.SubElement(svg, "{http://www.w3.org/2000/svg}style")
+          style.text = "*{animation:none!important}.s,.u{display:none}"
+          tree.write("dist/calendar.svg", encoding="utf-8")
+
+      - name: Publish the calendar images
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: contribution-art
+          publish_dir: ./dist
+          enable_jekyll: true
+          full_commit_message: Refresh contribution calendar
