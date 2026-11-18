@@ -1,5 +1,5 @@
 <picture>
-  <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/profile.svg">
+  <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/workbench.svg">
   <img src="./assets/profile-still.png" width="1000" alt="BlushRins — software developer in the making. A retro terminal traces a linked list in C.">
 </picture>
 
