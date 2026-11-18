@@ -15,11 +15,13 @@
     <clipPath id="command"><rect class="typed" x="671" y="119" width="65" height="24"/></clipPath>
     <style>
       @keyframes type-command { from { width:0 } to { width:65px } }
+      @keyframes keystroke { 0%,100% { transform:translateY(0) } 50% { transform:translateY(2.7px) } }
       @keyframes appear { from { opacity:0; transform:translateY(4px) } to { opacity:1; transform:translateY(0) } }
       @media (prefers-reduced-motion:no-preference) {
         .typed { animation:type-command .55s .12s steps(6,end) both }
-        .result { animation:appear .18s .72s both }
-        .greeting { animation:appear .42s .78s both }
+        .enter { animation:keystroke .2s .67s both }
+        .result { animation:appear .18s .77s both }
+        .greeting { animation:appear .42s .77s both }
         .aspiration { animation:appear .45s 1.2s both }
       }
     </style>
@@ -64,5 +66,11 @@
     <rect width="179" height="30" fill="url(#keys)"/>
     <rect x="45" y="22" width="75" height="5" rx="1" fill="#fff0db"/>
   </g>
-  <path d="M836 250h13l7 5h-14z" fill="#9a576d"/>
+  <g transform="matrix(1 0 .7 .75 821 246)">
+    <rect y="3" width="27" height="14" rx="2" fill="#754a60"/>
+    <g class="enter">
+      <rect width="27" height="14" rx="2" fill="#cf879d"/>
+      <path d="M20 3v5H8m3-3L8 8l3 3" fill="none" stroke="#432638" stroke-width="1.8"/>
+    </g>
+  </g>
 </svg>

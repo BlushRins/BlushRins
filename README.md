@@ -1,4 +1,6 @@
 <picture>
+  <source media="(max-width: 640px) and (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/introduction-mobile-still.png">
+  <source media="(max-width: 640px)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/introduction-mobile.svg">
   <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/introduction.svg">
   <img src="./assets/introduction-still.png" width="1000" alt="Hi, I’m Matthew Llenos. I go by BlushRins, and I’m an aspiring software developer.">
 </picture>
@@ -32,7 +34,7 @@ Pick a key to explore the code. The PHP key opens the official manual.
 
 ## On my workbench
 
-### Lift Tracker
+### <img src="./assets/weight-plates.svg" alt="" width="52" height="44" align="middle"> Lift Tracker
 
 Between sets, I want to know what I lifted last time and what to aim for next. Lift Tracker keeps both on one screen, logs sets offline, and saves the history on my phone.
 
@@ -40,7 +42,7 @@ Between sets, I want to know what I lifted last time and what to aim for next. L
 
 [View source](https://github.com/BlushRins/lift-tracker)
 
-### Study Hub
+### <img src="./assets/notebook.svg" alt="" width="52" height="44" align="middle"> Study Hub
 
 I keep my data structures notes in Obsidian. Study Hub turns the same Markdown files into a web reader with code examples and diagrams. My bit-vector notes show how eight yes-or-no answers fit into a single byte.
 

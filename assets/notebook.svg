@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="60" viewBox="0 0 72 60">
+  <title>Open notebook with linked nodes</title>
+  <g stroke="#503648" stroke-width="2" stroke-linejoin="round">
+    <path d="m5 14 27-2 5 3 25-2 5 32-26 3-6-1-25 3z" fill="#aa7b90"/>
+    <path d="M5 11q16-5 29 0l5 33q-11-5-29 0z" fill="#f4d5c0"/>
+    <path d="M34 11q10-7 28-5l5 33q-16-2-28 5z" fill="#ffe7ce"/>
+    <path d="m34 11 5 33" fill="none"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="m12 19 13-1m-12 7 15-1m-14 7 10-1" stroke="#9c737c" stroke-width="2"/>
+    <path d="m47 17 8 8" stroke="#4a665a" stroke-width="2.5"/>
+  </g>
+  <g stroke="#425d52" stroke-width="1.7" fill="#b5d4af"><rect x="41" y="13" width="8" height="7" rx="1"/><rect x="52" y="23" width="8" height="7" rx="1"/></g>
+</svg>

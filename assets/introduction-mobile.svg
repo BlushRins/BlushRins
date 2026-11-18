@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="290" viewBox="0 0 480 290" role="img" aria-labelledby="title desc">
+  <title id="title">Hi, I’m Matthew Llenos — BlushRins, aspiring software developer</title>
+  <desc id="desc">A rose desktop terminal types whoami and prints blushrins. The BlushRins wordmark stays visible as Matthew introduces himself.</desc>
+  <defs>
+    <linearGradient id="night" x2="1" y2=".25" gradientUnits="objectBoundingBox">
+      <stop stop-color="#241d30"/><stop offset=".65" stop-color="#362638"/><stop offset="1" stop-color="#4b3249"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0v24" fill="none" stroke="#bd8a9f" stroke-width="1" opacity=".15"/>
+    </pattern>
+    <pattern id="keys" width="15" height="10" patternUnits="userSpaceOnUse">
+      <rect x="1" y="1" width="12" height="7" rx="1.5" fill="#885b72"/>
+      <rect x="1" y="1" width="11" height="5" rx="1" fill="#fae1ce"/>
+    </pattern>
+    <clipPath id="command"><rect class="typed" x="671" y="119" width="65" height="24"/></clipPath>
+    <style>
+      @keyframes type-command { from { width:0 } to { width:65px } }
+      @keyframes keystroke { 0%,100% { transform:translateY(0) } 50% { transform:translateY(2.7px) } }
+      @keyframes appear { from { opacity:0; transform:translateY(4px) } to { opacity:1; transform:translateY(0) } }
+      @media (prefers-reduced-motion:no-preference) {
+        .typed { animation:type-command .55s .12s steps(6,end) both }
+        .enter { animation:keystroke .2s .67s both }
+        .result { animation:appear .18s .77s both }
+        .greeting { animation:appear .42s .77s both }
+        .aspiration { animation:appear .45s 1.2s both }
+      }
+    </style>
+  </defs>
+  <rect width="480" height="290" rx="12" fill="url(#night)"/>
+  <path d="M268 122h212v156q0 12-12 12H268z" fill="url(#grid)"/>
+  <path d="M16 32V16h16m416 0h16v16M16 258v16h16" fill="none" stroke="#987285"/>
+  <text class="greeting" x="30" y="62" fill="#f4d5dc" font-family="Inter,Arial,sans-serif" font-size="31">Hi, I’m Matthew Llenos</text>
+  <text x="26" y="139" fill="#fff1e1" font-family="Inter,Arial,sans-serif" font-weight="650" font-size="77" letter-spacing="-4">Blush<tspan font-family="Georgia,'Liberation Serif',serif" font-style="italic" font-weight="400" fill="#f6b7c7">Rins</tspan></text>
+  <path d="M31 161h185" fill="none" stroke="#987285" opacity=".6"/>
+  <g class="aspiration" font-family="ui-monospace,monospace" font-size="21" fill="#fae6db">
+    <text x="30" y="202">Aspiring software</text>
+    <text x="30" y="229">developer</text>
+  </g>
+  <g transform="translate(-9 128) scale(.50)">
+  <!-- Desktop and coiled keyboard cable -->
+  <ellipse cx="766" cy="276" rx="179" ry="16" fill="#251d2b" opacity=".75"/>
+  <path d="M895 245c54 4 57-23 32-23-20 0-12 27 12 20 24-7 8-31-35-33" fill="none" stroke="#d195aa" stroke-width="4"/>
+  <!-- CRT enclosure, vented side panel, and foot -->
+  <g stroke="#251d2b" stroke-width="3" stroke-linejoin="round">
+    <path d="M675 211h143l15 15-11 9H668l-9-8z" fill="#ae7e90"/>
+    <path d="M621 67l25-20h239q8 0 10 9l10 129-24 23z" fill="#e2acc0"/>
+    <path d="M868 70l25-18 12 133-27 29z" fill="#a5748c"/>
+    <path d="M623 66h241q8 0 9 10l6 126q1 12-10 12H627q-10 0-10-11l-3-126q0-11 9-11z" fill="#f4cbbd"/>
+  </g>
+  <path d="M885 85l7-6m-6 14 7-6m-6 14 7-6m-6 14 7-6m-6 14 7-6" fill="none" stroke="#644456" stroke-width="3" stroke-linecap="round"/>
+  <rect x="632" y="79" width="225" height="110" rx="12" fill="#ab8290"/>
+  <rect x="636" y="82" width="216" height="103" rx="10" fill="#243733"/>
+  <g font-family="ui-monospace,monospace" fill="#c5eecb">
+    <text x="651" y="108" font-size="15" fill="#97c4ab">~/terminal</text>
+    <path d="M652 116h183" stroke="#577467"/>
+    <text x="651" y="140" font-size="17">$</text>
+    <text x="671" y="140" font-size="17" textLength="64" lengthAdjust="spacingAndGlyphs" clip-path="url(#command)">whoami</text>
+    <text class="result" x="651" y="166" font-size="19" fill="#e6f6b9">blushrins</text>
+  </g>
+  <path d="M638 201h34m5 0h8" stroke="#a77885" stroke-width="3"/>
+  <circle cx="842" cy="200" r="3.5" fill="#496b59"/>
+  <!-- Perspective keyboard with a separate space bar -->
+  <path d="M639 232h216l40 32v10H599v-10z" fill="#a97787" stroke="#251d2b" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M639 231h216l40 33H599z" fill="#eab8ac" stroke="#251d2b" stroke-width="2.5" stroke-linejoin="round"/>
+  <g transform="matrix(1 0 -.78 .68 640 235)">
+    <rect width="179" height="30" fill="url(#keys)"/>
+    <rect x="45" y="22" width="75" height="5" rx="1" fill="#fff0db"/>
+  </g>
+  <g transform="matrix(1 0 .7 .75 821 246)">
+    <rect y="3" width="27" height="14" rx="2" fill="#754a60"/>
+    <g class="enter">
+      <rect width="27" height="14" rx="2" fill="#cf879d"/>
+      <path d="M20 3v5H8m3-3L8 8l3 3" fill="none" stroke="#432638" stroke-width="1.8"/>
+    </g>
+  </g>
+  </g>
+</svg>
