@@ -21,9 +21,9 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake.svg?color_snake=#f7b5ca&color_dots=#3b3444,#446b5a,#689777,#96c99b,#c6ecb8
+            dist/snake.svg?color_snake=#f0efd4&color_dots=#32474a,#4e6d62,#72937b,#9fb398,#c7d8ae
 
-      - name: Match the workbench colors and make a still calendar
+      - name: Match the meadow colors and make a still calendar
         shell: python
         run: |
           from pathlib import Path
@@ -36,7 +36,7 @@ jobs:
           x, y, width, height = svg.attrib["viewBox"].split()
           panel = ET.Element("{http://www.w3.org/2000/svg}rect", {
               "x": x, "y": y, "width": width, "height": height,
-              "rx": "10", "fill": "#251f2d",
+              "rx": "10", "fill": "#213438",
           })
           svg.insert(0, panel)
           tree.write(path, encoding="utf-8")
@@ -78,14 +78,14 @@ jobs:
           parts = [
               '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 100" role="img">',
               f"<title>Past year on GitHub — {summary}</title>",
-              '<rect width="640" height="100" rx="9" fill="#251f2d"/>',
+              '<rect width="640" height="100" rx="9" fill="#213438"/>',
           ]
           for i, (label, value) in enumerate(metrics):
               x = 19 + i * 160
               if i:
-                  parts.append(f'<path d="M{x-19} 19v62" stroke="#514353"/>')
-              parts.append(f'<text x="{x}" y="51" font-family="monospace" font-size="37" fill="#f7c2d3">{value:,}</text>')
-              parts.append(f'<text x="{x}" y="78" font-family="sans-serif" font-size="18" fill="#f4e2d9">{label}</text>')
+                  parts.append(f'<path d="M{x-19} 19v62" stroke="#465e5a"/>')
+              parts.append(f'<text x="{x}" y="51" font-family="monospace" font-size="37" fill="#e5edcf">{value:,}</text>')
+              parts.append(f'<text x="{x}" y="78" font-family="sans-serif" font-size="18" fill="#cedbd2">{label}</text>')
           parts.append("</svg>")
           Path("dist/stats.svg").write_text("\n".join(parts), encoding="utf-8")
 
