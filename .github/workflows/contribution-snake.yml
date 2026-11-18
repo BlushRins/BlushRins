@@ -45,6 +45,50 @@ jobs:
           style.text = "*{animation:none!important}.s,.u{display:none}"
           tree.write("dist/calendar.svg", encoding="utf-8")
 
+      - name: Summarize the past year on GitHub
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROFILE_OWNER: ${{ github.repository_owner }}
+        shell: python
+        run: |
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+
+          query = """query($login:String!) {
+            user(login:$login) { contributionsCollection {
+              totalCommitContributions totalPullRequestContributions
+              contributionCalendar { totalContributions weeks { contributionDays { contributionCount } } }
+            } }
+          }"""
+          response = subprocess.check_output([
+              "gh", "api", "graphql", "-f", f"query={query}", "-f", f"login={os.environ['PROFILE_OWNER']}",
+          ])
+          activity = json.loads(response)["data"]["user"]["contributionsCollection"]
+          calendar = activity["contributionCalendar"]
+          days = [day for week in calendar["weeks"] for day in week["contributionDays"]]
+          metrics = [
+              ("Contributions", calendar["totalContributions"]),
+              ("Active days", sum(day["contributionCount"] > 0 for day in days)),
+              ("Commits", activity["totalCommitContributions"]),
+              ("Pull requests", activity["totalPullRequestContributions"]),
+          ]
+          summary = ", ".join(f"{value:,} {label.lower()}" for label, value in metrics)
+          parts = [
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 100" role="img">',
+              f"<title>Past year on GitHub — {summary}</title>",
+              '<rect width="640" height="100" rx="9" fill="#251f2d"/>',
+          ]
+          for i, (label, value) in enumerate(metrics):
+              x = 19 + i * 160
+              if i:
+                  parts.append(f'<path d="M{x-19} 19v62" stroke="#514353"/>')
+              parts.append(f'<text x="{x}" y="51" font-family="monospace" font-size="37" fill="#f7c2d3">{value:,}</text>')
+              parts.append(f'<text x="{x}" y="78" font-family="sans-serif" font-size="18" fill="#f4e2d9">{label}</text>')
+          parts.append("</svg>")
+          Path("dist/stats.svg").write_text("\n".join(parts), encoding="utf-8")
+
       - name: Publish the calendar images
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4
         with:
