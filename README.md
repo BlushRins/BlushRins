@@ -1,11 +1,11 @@
 <picture>
-  <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/workbench.svg">
-  <img src="./assets/profile-still.png" width="1000" alt="BlushRins — software developer in the making. A retro terminal traces a linked list in C.">
+  <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/introduction.svg">
+  <img src="./assets/introduction-still.png" width="1000" alt="Hi, I’m Matthew Llenos. I go by BlushRins, and I’m an aspiring software developer.">
 </picture>
 
 I’m learning software development through C data structures, offline web apps, and tools for studying.
 
-The terminal above follows one pointer at a time. Here’s the loop behind it in C.
+Here’s how I walk a linked list in C, one pointer at a time.
 
 ```c
 for (const struct Node *node = head; node != NULL; node = node->next) {
