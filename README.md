@@ -27,3 +27,10 @@ Between sets, I want to know what I lifted last time and what to aim for next. L
 I keep my data structures notes in Obsidian. Study Hub turns the same Markdown files into a web reader with code examples and diagrams. My bit-vector notes show how eight yes-or-no answers fit into a single byte.
 
 [Read the bit-vector notes ↗](https://github.com/BlushRins/Studyhub/blob/HEAD/content/Bit-Vector%20Sets.md) · [View source](https://github.com/BlushRins/Studyhub)
+
+## Contribution trail
+
+<picture>
+  <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/snake.svg">
+  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/calendar.svg" width="1000" alt="My GitHub contribution calendar for the past year. Brighter green squares mark more active days.">
+</picture>
