@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="324" height="70" viewBox="0 0 324 70" role="img">
+  <title>C, Java, PHP, Shell</title>
+  <g transform="translate(1 2)" fill="#352733">
+    <rect x="1" y="4" width="76" height="58" rx="8" fill="#846575" stroke="#382c39" stroke-width="2"/>
+    <rect width="75" height="55" rx="7" fill="#fae0c3" stroke="#382c39" stroke-width="2"/>
+    <text x="8" y="23" font-family="ui-monospace,monospace" font-size="14">.c</text>
+    <text x="8" y="44" font-family="Arial,sans-serif" font-size="12.5" font-weight="bold">C</text>
+  </g>
+  <g transform="translate(82 2)" fill="#352733">
+    <rect x="1" y="4" width="76" height="58" rx="8" fill="#846575" stroke="#382c39" stroke-width="2"/>
+    <rect width="75" height="55" rx="7" fill="#eeb9ae" stroke="#382c39" stroke-width="2"/>
+    <text x="8" y="23" font-family="ui-monospace,monospace" font-size="14">.java</text>
+    <text x="8" y="44" font-family="Arial,sans-serif" font-size="12.5" font-weight="bold">Java</text>
+  </g>
+  <g transform="translate(163 2)" fill="#352733">
+    <rect x="1" y="4" width="76" height="58" rx="8" fill="#846575" stroke="#382c39" stroke-width="2"/>
+    <rect width="75" height="55" rx="7" fill="#cbbddd" stroke="#382c39" stroke-width="2"/>
+    <text x="8" y="23" font-family="ui-monospace,monospace" font-size="14">.php</text>
+    <text x="8" y="44" font-family="Arial,sans-serif" font-size="12.5" font-weight="bold">PHP</text>
+  </g>
+  <g transform="translate(244 2)" fill="#352733">
+    <rect x="1" y="4" width="76" height="58" rx="8" fill="#846575" stroke="#382c39" stroke-width="2"/>
+    <rect width="75" height="55" rx="7" fill="#c2d4b8" stroke="#382c39" stroke-width="2"/>
+    <text x="8" y="23" font-family="ui-monospace,monospace" font-size="14">.sh</text>
+    <text x="8" y="44" font-family="Arial,sans-serif" font-size="12.5" font-weight="bold">Shell</text>
+  </g>
+</svg>
