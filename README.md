@@ -95,12 +95,11 @@ I keep my data structures notes in Obsidian. Study Hub turns the same Markdown f
 
 ## Contribution trail
 
-My past year and rolling 16-week trail on GitHub
+My past year on GitHub
 
-<p>
-  <img src="./assets/contribution/stats.svg" width="640" alt="Past-year totals for contributions, active days, commits, and pull requests">
-</p>
+![Past-year totals for contributions, active days, commits, and pull requests](https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/stats.svg)
 
-<p>
-  <img src="./assets/contribution/heatmap.svg" width="640" alt="Rolling 16-week GitHub contribution heatmap in pastel pink with a segmented sage-green activity intensity bar">
-</p>
+<picture>
+  <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/snake.svg">
+  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/calendar.svg" width="1000" alt="My GitHub contribution calendar for the past year. Brighter green squares mark more active days.">
+</picture>
