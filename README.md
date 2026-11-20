@@ -1,8 +1,8 @@
 <picture>
   <source media="(max-width: 640px) and (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/introduction-mobile-still.png">
-  <source media="(max-width: 640px)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/introduction-mobile.svg">
-  <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/introduction.svg">
-  <img src="./assets/introduction-still.png" width="1000" alt="Hi, I’m Matthew Llenos. I go by BlushRins, and I’m an aspiring software developer.">
+  <source media="(max-width: 640px)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/introduction-mobile-loop.png">
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/introduction-still.png">
+  <img src="./assets/introduction-loop.png" width="1000" alt="Hi, I’m Matthew Llenos. I go by BlushRins, and I’m an aspiring software developer.">
 </picture>
 
 <h2 align="center">Matthew Llenos</h2>
@@ -11,8 +11,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/profile-card/terminal-dance.svg">
-    <img src="./assets/profile-card/terminal-still.png" width="158" alt="My rose-colored pixel-B terminal doing a two-step">
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/profile-card/terminal-still.png">
+    <img src="./assets/profile-card/terminal-dance-loop.png" width="158" alt="My rose-colored pixel-B terminal doing a two-step">
   </picture>
 </p>
 
