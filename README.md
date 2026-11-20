@@ -5,9 +5,27 @@
   <img src="./assets/introduction-still.png" width="1000" alt="Hi, I’m Matthew Llenos. I go by BlushRins, and I’m an aspiring software developer.">
 </picture>
 
-I’m learning software development through C data structures, offline web apps, and tools for studying.
+<h2 align="center">Matthew Llenos</h2>
 
-Here’s how I walk a linked list in C, one pointer at a time.
+<p align="center"><strong>Aspiring software developer</strong><br><code>C data structures / offline web apps / study tools</code></p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/profile-card/terminal-dance.svg">
+    <img src="./assets/profile-card/terminal-still.png" width="158" alt="My rose-colored pixel-B terminal doing a two-step">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://www.instagram.com/44_matteo_mat/"><img src="./assets/profile-card/instagram.svg" alt="Instagram — @44_matteo_mat" height="32"></a>
+  <a href="#on-my-workbench"><img src="./assets/profile-card/projects.svg" alt="Explore my projects" height="32"></a>
+</p>
+
+## About me
+
+I go by **BlushRins** online. Two things I keep track of are what I lifted last week and what I learned in class. That’s where Lift Tracker and Study Hub started.
+
+I’m learning C by working through data structures. In a linked list, each node holds a value and a pointer. Following those pointers lets me read the whole list.
 
 ```c
 for (const struct Node *node = head; node != NULL; node = node->next) {

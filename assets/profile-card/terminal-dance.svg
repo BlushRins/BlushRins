@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="148" viewBox="0 0 100 82" role="img" aria-labelledby="title">
+  <title id="title">BlushRins’ pixel terminal doing a little two-step</title>
+  <style>
+    @keyframes step { 0%,50%,100% {transform:translate(0,0)} 25% {transform:translate(-3px,-2px) rotate(-5deg)} 75% {transform:translate(3px,-2px) rotate(5deg)} }
+    @keyframes wave { 0%,50%,100% {transform:rotate(0)} 25% {transform:rotate(20deg)} 75% {transform:rotate(-12deg)} }
+    @media(prefers-reduced-motion:no-preference){
+      .dancer {transform-origin:50px 65px; animation:step 1.25s ease-in-out 3}
+      .hand {transform-origin:69px 42px; animation:wave 1.25s ease-in-out 3}
+    }
+  </style>
+  <ellipse cx="50" cy="70" rx="27" ry="3" fill="#917081" opacity=".45"/>
+  <g class="dancer" stroke="#422c3a" stroke-width="2" stroke-linejoin="round">
+    <path d="m40 51-1 8-6 3v4h8l6-13m11-1 3 7 6 2v4h-8l-7-12" fill="#b88290"/>
+    <path d="M32 64h11l-2 5H26v-2zm26-1h10l6 3v3H59z" fill="#e2a7aa"/>
+    <path d="M28 37 21 39l-6-6-4 3 7 10h5l7-4" fill="#ecc1b4"/>
+    <g class="hand"><path d="m69 39 8-6v-7l5-1 1 11-10 10z" fill="#f2ceba"/></g>
+    <path d="M27 18 33 13h36l6 5v30l-6 7H30l-4-5z" fill="#ad8194"/>
+    <rect x="25" y="18" width="44" height="35" rx="4" fill="#f3c5b8"/>
+    <rect x="30" y="22" width="33" height="23" rx="3" fill="#273d37"/>
+    <path d="M31 49h8" stroke="#ab7c85"/><circle cx="61" cy="49" r="1.4" fill="#4e735d" stroke="none"/>
+    <path stroke="none" fill="#d3efb6" fill-rule="evenodd" d="M39 25h11v2h3v5h-2v2h2v5h-3v2H39zm4 3v4h6v-4zm0 7v3h6v-3z"/>
+  </g>
+</svg>
