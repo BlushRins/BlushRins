@@ -33,6 +33,10 @@ for (const struct Node *node = head; node != NULL; node = node->next) {
 }
 ```
 
+<p>
+  <img src="./assets/linked-list.svg" width="760" alt="Animated 4-node C linked list traversal from head through nodes 12, 27, 44, and 58 to NULL">
+</p>
+
 [See how the nodes connect](https://github.com/BlushRins/obsidian-study-vault/blob/HEAD/notes/linked-list-nodes.md)
 
 ## Languages on my keyboard
@@ -56,15 +60,26 @@ Pick a key to explore the code. The PHP key opens the official manual.
 
 Between sets, I want to know what I lifted last time and what to aim for next. Lift Tracker keeps both on one screen, logs sets offline, and saves the history on my phone.
 
-**20-second demo.** [Open Lift Tracker](https://blushrins.github.io/lift-tracker/), pick Squat, enter 20 kg and 5 reps, then tap **Log set 1**. Refresh and look under **Today** for the set you just saved.
+**20-second demo.** Open Lift Tracker, pick **Squat**, enter **20 kg** and **5 reps**, then tap **Log set 1**. Refresh and look under **Today** for the set you just saved.
 
-[View source](https://github.com/BlushRins/lift-tracker)
+<p>
+  <img src="./assets/workbench/lift-tracker-card.svg" width="540" alt="Lift Tracker sample logged set: Squat, 20 kg times 5 reps, saved offline">
+</p>
+
+<p>
+  <a href="https://blushrins.github.io/lift-tracker/"><img src="./assets/workbench/btn-lift-tracker.svg" alt="Open Lift Tracker" height="32"></a>
+  <a href="https://github.com/BlushRins/lift-tracker"><img src="./assets/workbench/btn-view-source.svg" alt="View Lift Tracker source on GitHub" height="32"></a>
+</p>
 
 ### <img src="./assets/notebook.svg" alt="" width="52" height="44" align="middle"> Study Hub
 
 I keep my data structures notes in Obsidian. Study Hub turns the same Markdown files into a web reader with code examples and diagrams. My bit-vector notes show how eight yes-or-no answers fit into a single byte.
 
 **One-byte challenge.** If the rightmost bit represents 0, which numbers belong to the set `0b00101100`?
+
+<p>
+  <img src="./assets/workbench/bit-vector-byte.svg" width="540" alt="8-bit byte visualizer showing 0b00101100 with glowing pastel-pink 1 bits">
+</p>
 
 <details>
 <summary>Check your answer</summary>
@@ -73,15 +88,19 @@ I keep my data structures notes in Obsidian. Study Hub turns the same Markdown f
 
 </details>
 
-[Explore the bit-vector notes](https://github.com/BlushRins/Studyhub/blob/HEAD/content/Bit-Vector%20Sets.md#1-the-core-idea) · [View source](https://github.com/BlushRins/Studyhub)
+<p>
+  <a href="https://github.com/BlushRins/Studyhub/blob/HEAD/content/Bit-Vector%20Sets.md#1-the-core-idea"><img src="./assets/workbench/btn-bit-vector.svg" alt="Explore the bit-vector notes" height="32"></a>
+  <a href="https://github.com/BlushRins/Studyhub"><img src="./assets/workbench/btn-view-source.svg" alt="View Study Hub source on GitHub" height="32"></a>
+</p>
 
 ## Contribution trail
 
-My past year on GitHub
+My past year and rolling 16-week trail on GitHub
 
-![Past-year totals for contributions, active days, commits, and pull requests](https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/stats.svg)
+<p>
+  <img src="./assets/contribution/stats.svg" width="640" alt="Past-year totals for contributions, active days, commits, and pull requests">
+</p>
 
-<picture>
-  <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/snake.svg">
-  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/calendar.svg" width="1000" alt="My GitHub contribution calendar for the past year. Brighter green squares mark more active days.">
-</picture>
+<p>
+  <img src="./assets/contribution/heatmap.svg" width="640" alt="Rolling 16-week GitHub contribution heatmap in pastel pink with a segmented sage-green activity intensity bar">
+</p>

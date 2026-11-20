@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="32" viewBox="0 0 176 32" role="img">
+  <title>Open Lift Tracker</title>
+  <rect x=".5" y=".5" width="175" height="31" rx="5" fill="#edbdc8" stroke="#916b7c"/>
+  <g stroke="#412a38" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 16v4a1.5 1.5 0 0 1-1.5 1.5h-6A1.5 1.5 0 0 1 10 20v-6a1.5 1.5 0 0 1 1.5-1.5H15"/>
+    <path d="M17 10h5v5m0-5-6.5 6.5"/>
+  </g>
+  <text x="33" y="21" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="bold" fill="#352432">Open Lift Tracker</text>
+</svg>

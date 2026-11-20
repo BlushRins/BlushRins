@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="154" viewBox="0 0 760 154" role="img" aria-labelledby="ll-title ll-desc">
+  <title id="ll-title">C linked list traversal</title>
+  <desc id="ll-desc">Animated four-node C linked list traversal from head through nodes holding 12, 27, 44, and 58 to NULL.</desc>
+  <defs>
+    <linearGradient id="ll-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241d30"/>
+      <stop offset=".55" stop-color="#34253a"/>
+      <stop offset="1" stop-color="#402c43"/>
+    </linearGradient>
+    <style>
+      .ptr {
+        animation: ptr-hop 5.6s ease-in-out infinite;
+      }
+      .n0-hi { animation: n0-active 5.6s ease-in-out infinite; }
+      .n1-hi { animation: n1-active 5.6s ease-in-out infinite; }
+      .n2-hi { animation: n2-active 5.6s ease-in-out infinite; }
+      .n3-hi { animation: n3-active 5.6s ease-in-out infinite; }
+      .nn-hi { animation: nn-active 5.6s ease-in-out infinite; }
+      .a1-hi { animation: a1-pulse 5.6s ease-in-out infinite; }
+      .a2-hi { animation: a2-pulse 5.6s ease-in-out infinite; }
+      .a3-hi { animation: a3-pulse 5.6s ease-in-out infinite; }
+      .a4-hi { animation: a4-pulse 5.6s ease-in-out infinite; }
+      @keyframes ptr-hop {
+        0%, 16% { transform: translateX(0); opacity: 1; }
+        21%, 37% { transform: translateX(140px); opacity: 1; }
+        42%, 58% { transform: translateX(280px); opacity: 1; }
+        63%, 79% { transform: translateX(420px); opacity: 1; }
+        84%, 92% { transform: translateX(539px); opacity: 1; }
+        95% { transform: translateX(539px); opacity: 0; }
+        96% { transform: translateX(0); opacity: 0; }
+        99%, 100% { transform: translateX(0); opacity: 1; }
+      }
+      @keyframes n0-active {
+        0%, 16% { opacity: 1; }
+        20%, 96% { opacity: 0; }
+        99%, 100% { opacity: 1; }
+      }
+      @keyframes n1-active {
+        0%, 18% { opacity: 0; }
+        21%, 37% { opacity: 1; }
+        41%, 100% { opacity: 0; }
+      }
+      @keyframes n2-active {
+        0%, 39% { opacity: 0; }
+        42%, 58% { opacity: 1; }
+        62%, 100% { opacity: 0; }
+      }
+      @keyframes n3-active {
+        0%, 60% { opacity: 0; }
+        63%, 79% { opacity: 1; }
+        83%, 100% { opacity: 0; }
+      }
+      @keyframes nn-active {
+        0%, 81% { opacity: 0; }
+        84%, 93% { opacity: 1; }
+        96%, 100% { opacity: 0; }
+      }
+      @keyframes a1-pulse {
+        0%, 14%, 23%, 100% { opacity: 0; }
+        17%, 20% { opacity: 1; }
+      }
+      @keyframes a2-pulse {
+        0%, 35%, 44%, 100% { opacity: 0; }
+        38%, 41% { opacity: 1; }
+      }
+      @keyframes a3-pulse {
+        0%, 56%, 65%, 100% { opacity: 0; }
+        59%, 62% { opacity: 1; }
+      }
+      @keyframes a4-pulse {
+        0%, 77%, 86%, 100% { opacity: 0; }
+        80%, 83% { opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; }
+      }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="758" height="152" rx="12" fill="url(#ll-bg)" stroke="#5b4760" stroke-width="1.5"/>
+  <path d="M12 24V12h12M736 12h12v12M12 130v12h12M748 130v12h-12" fill="none" stroke="#987285" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="24" y="27" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11.5" fill="#97c4ab">struct Node *node = head;</text>
+  <text x="736" y="27" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#b89fb2">4 nodes · O(n) walk</text>
+
+  <!-- head pointer badge -->
+  <rect x="24" y="71" width="54" height="30" rx="6" fill="#342940" stroke="#987285" stroke-width="1.3"/>
+  <text x="51" y="90" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="bold" fill="#f7c2d3">head</text>
+  <path d="M78 86h20" fill="none" stroke="#97c4ab" stroke-width="2" stroke-linecap="round"/>
+  <path d="M96 81.5l7 4.5-7 4.5z" fill="#97c4ab"/>
+
+  <!-- Node 0 (x=104) -->
+  <rect x="104" y="60" width="112" height="52" rx="8" fill="#342b3e" stroke="#5b4760" stroke-width="1.5"/>
+  <path d="M168 65v42" stroke="#5b4760" stroke-width="1"/>
+  <text x="136" y="74" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#b89fb2">val</text>
+  <text x="136" y="99" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="bold" fill="#fff1e1">12</text>
+  <text x="192" y="74" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#97c4ab">*next</text>
+  <circle cx="192" cy="93" r="6.5" fill="none" stroke="#577467" stroke-width="1"/>
+  <circle cx="192" cy="93" r="3.8" fill="#c5eecb"/>
+  <g class="n0-hi" opacity="1">
+    <rect x="101.5" y="57.5" width="117" height="57" rx="10" fill="none" stroke="#f7b5ca" stroke-width="5" opacity=".24"/>
+    <rect x="104" y="60" width="112" height="52" rx="8" fill="none" stroke="#f7b5ca" stroke-width="2"/>
+  </g>
+  <text x="160" y="131" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#b89fb2">0x10</text>
+
+  <!-- Arrow 1 -->
+  <path d="M216 86h22" fill="none" stroke="#97c4ab" stroke-width="2" stroke-linecap="round"/>
+  <path d="M236 81.5l7 4.5-7 4.5z" fill="#97c4ab"/>
+  <g class="a1-hi" opacity="0">
+    <path d="M216 86h22" fill="none" stroke="#f7b5ca" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M236 81l8 5-8 5z" fill="#f7b5ca"/>
+  </g>
+
+  <!-- Node 1 (x=244) -->
+  <rect x="244" y="60" width="112" height="52" rx="8" fill="#342b3e" stroke="#5b4760" stroke-width="1.5"/>
+  <path d="M308 65v42" stroke="#5b4760" stroke-width="1"/>
+  <text x="276" y="74" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#b89fb2">val</text>
+  <text x="276" y="99" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="bold" fill="#fff1e1">27</text>
+  <text x="332" y="74" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#97c4ab">*next</text>
+  <circle cx="332" cy="93" r="6.5" fill="none" stroke="#577467" stroke-width="1"/>
+  <circle cx="332" cy="93" r="3.8" fill="#c5eecb"/>
+  <g class="n1-hi" opacity="0">
+    <rect x="241.5" y="57.5" width="117" height="57" rx="10" fill="none" stroke="#f7b5ca" stroke-width="5" opacity=".24"/>
+    <rect x="244" y="60" width="112" height="52" rx="8" fill="none" stroke="#f7b5ca" stroke-width="2"/>
+  </g>
+  <text x="300" y="131" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#b89fb2">0x28</text>
+
+  <!-- Arrow 2 -->
+  <path d="M356 86h22" fill="none" stroke="#97c4ab" stroke-width="2" stroke-linecap="round"/>
+  <path d="M376 81.5l7 4.5-7 4.5z" fill="#97c4ab"/>
+  <g class="a2-hi" opacity="0">
+    <path d="M356 86h22" fill="none" stroke="#f7b5ca" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M376 81l8 5-8 5z" fill="#f7b5ca"/>
+  </g>
+
+  <!-- Node 2 (x=384) -->
+  <rect x="384" y="60" width="112" height="52" rx="8" fill="#342b3e" stroke="#5b4760" stroke-width="1.5"/>
+  <path d="M448 65v42" stroke="#5b4760" stroke-width="1"/>
+  <text x="416" y="74" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#b89fb2">val</text>
+  <text x="416" y="99" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="bold" fill="#fff1e1">44</text>
+  <text x="472" y="74" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#97c4ab">*next</text>
+  <circle cx="472" cy="93" r="6.5" fill="none" stroke="#577467" stroke-width="1"/>
+  <circle cx="472" cy="93" r="3.8" fill="#c5eecb"/>
+  <g class="n2-hi" opacity="0">
+    <rect x="381.5" y="57.5" width="117" height="57" rx="10" fill="none" stroke="#f7b5ca" stroke-width="5" opacity=".24"/>
+    <rect x="384" y="60" width="112" height="52" rx="8" fill="none" stroke="#f7b5ca" stroke-width="2"/>
+  </g>
+  <text x="440" y="131" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#b89fb2">0x40</text>
+
+  <!-- Arrow 3 -->
+  <path d="M496 86h22" fill="none" stroke="#97c4ab" stroke-width="2" stroke-linecap="round"/>
+  <path d="M516 81.5l7 4.5-7 4.5z" fill="#97c4ab"/>
+  <g class="a3-hi" opacity="0">
+    <path d="M496 86h22" fill="none" stroke="#f7b5ca" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M516 81l8 5-8 5z" fill="#f7b5ca"/>
+  </g>
+
+  <!-- Node 3 (x=524) -->
+  <rect x="524" y="60" width="112" height="52" rx="8" fill="#342b3e" stroke="#5b4760" stroke-width="1.5"/>
+  <path d="M588 65v42" stroke="#5b4760" stroke-width="1"/>
+  <text x="556" y="74" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#b89fb2">val</text>
+  <text x="556" y="99" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" font-weight="bold" fill="#fff1e1">58</text>
+  <text x="612" y="74" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#97c4ab">*next</text>
+  <circle cx="612" cy="93" r="6.5" fill="none" stroke="#577467" stroke-width="1"/>
+  <circle cx="612" cy="93" r="3.8" fill="#c5eecb"/>
+  <g class="n3-hi" opacity="0">
+    <rect x="521.5" y="57.5" width="117" height="57" rx="10" fill="none" stroke="#f7b5ca" stroke-width="5" opacity=".24"/>
+    <rect x="524" y="60" width="112" height="52" rx="8" fill="none" stroke="#f7b5ca" stroke-width="2"/>
+  </g>
+  <text x="580" y="131" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#b89fb2">0x58</text>
+
+  <!-- Arrow 4 -->
+  <path d="M636 86h22" fill="none" stroke="#97c4ab" stroke-width="2" stroke-linecap="round"/>
+  <path d="M656 81.5l7 4.5-7 4.5z" fill="#97c4ab"/>
+  <g class="a4-hi" opacity="0">
+    <path d="M636 86h22" fill="none" stroke="#f7b5ca" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M656 81l8 5-8 5z" fill="#f7b5ca"/>
+  </g>
+
+  <!-- NULL sentinel (x=664) -->
+  <rect x="664" y="69" width="70" height="34" rx="6" fill="#2b2334" stroke="#8c6d82" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="699" y="90" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="bold" fill="#d9bec9">NULL</text>
+  <g class="nn-hi" opacity="0">
+    <rect x="661.5" y="66.5" width="75" height="39" rx="8" fill="none" stroke="#f7b5ca" stroke-width="4" opacity=".22"/>
+    <rect x="664" y="69" width="70" height="34" rx="6" fill="none" stroke="#f7b5ca" stroke-width="1.8"/>
+  </g>
+  <text x="699" y="131" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#b89fb2">0x00</text>
+
+  <!-- Hopping pastel-pink node pointer -->
+  <g class="ptr">
+    <rect x="136" y="34" width="48" height="18" rx="4" fill="#f7b5ca"/>
+    <path d="M156 52l4 5 4-5z" fill="#f7b5ca"/>
+    <text x="160" y="46.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="bold" fill="#2a1d2b">node</text>
+  </g>
+</svg>
