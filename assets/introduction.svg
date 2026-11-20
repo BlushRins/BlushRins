@@ -14,15 +14,24 @@
     </pattern>
     <clipPath id="command"><rect class="typed" x="671" y="119" width="65" height="24"/></clipPath>
     <style>
-      @keyframes type-command { from { width:0 } to { width:65px } }
-      @keyframes keystroke { 0%,100% { transform:translateY(0) } 50% { transform:translateY(2.7px) } }
-      @keyframes appear { from { opacity:0; transform:translateY(4px) } to { opacity:1; transform:translateY(0) } }
+      @keyframes type-command {
+        0%,2%,100% { width:0 }
+        10%,93% { width:65px }
+      }
+      @keyframes keystroke {
+        0%,10%,13%,100% { transform:translateY(0) }
+        11.5% { transform:translateY(2.7px) }
+      }
+      @keyframes appear {
+        0%,100% { opacity:0; transform:translateY(4px) }
+        5%,83% { opacity:1; transform:translateY(0) }
+        88% { opacity:0; transform:translateY(4px) }
+      }
       @media (prefers-reduced-motion:no-preference) {
-        .typed { animation:type-command .55s .12s steps(6,end) both }
-        .enter { animation:keystroke .2s .67s both }
-        .result { animation:appear .18s .77s both }
-        .greeting { animation:appear .42s .77s both }
-        .aspiration { animation:appear .45s 1.2s both }
+        .typed { animation:type-command 8s steps(6,end) infinite }
+        .enter { animation:keystroke 8s ease-in-out infinite }
+        .result, .greeting { animation:appear 8s .92s ease-out infinite both }
+        .aspiration { animation:appear 8s 1.25s ease-out infinite both }
       }
     </style>
   </defs>
