@@ -10,13 +10,13 @@
     @media (prefers-reduced-motion:reduce) { * { animation:none!important } }
   </style>
   <g transform="translate(1 2)" fill="#352733">
-    <rect class="glow" x="-1" y="-1" width="78" height="62" rx="9" fill="none" stroke="#df8fa8" stroke-width="2.5" opacity="0"/>
-    <rect class="bevel" x="1" y="4" width="76" height="58" rx="8" fill="#846575" stroke="#382c39" stroke-width="2"/>
+    <rect class="glow" x="-1" y="-1" width="78" height="62" rx="9" fill="none" stroke="#df8fa8" stroke-width="2.5" opacity="0" />
+    <rect class="bevel" x="1" y="4" width="76" height="58" rx="8" fill="#846575" stroke="#382c39" stroke-width="2" />
     <g class="cap">
-      <rect width="75" height="55" rx="7" fill="#fae0c3" stroke="#382c39" stroke-width="2"/>
-      <path d="M9 3.5h57" fill="none" stroke="#ffffff" stroke-opacity=".42" stroke-width="1.5" stroke-linecap="round"/>
-      <text x="8" y="23" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14">.c</text>
-      <text x="8" y="44" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="bold">C</text>
+      <rect width="75" height="55" rx="7" fill="#fae0c3" stroke="#382c39" stroke-width="2" />
+      <path d="M9 3.5h57" fill="none" stroke="#ffffff" stroke-opacity=".42" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M10.7 16.09Q10.47 16.09 10.3 15.95Q10.14 15.8 10.14 15.48Q10.14 15.14 10.3 15Q10.47 14.87 10.7 14.87Q10.93 14.87 11.1 15Q11.26 15.14 11.26 15.48Q11.26 15.8 11.1 15.95Q10.93 16.09 10.7 16.09ZM16.44 16.09Q15.38 16.09 14.77 15.51Q14.16 14.93 14.16 13.62Q14.16 12.7 14.47 12.14Q14.77 11.58 15.3 11.33Q15.84 11.09 16.52 11.09Q16.95 11.09 17.29 11.17Q17.64 11.26 17.95 11.42L17.7 12.08Q17.41 11.92 17.14 11.86Q16.87 11.79 16.56 11.79Q15.73 11.79 15.36 12.24Q14.99 12.7 14.99 13.61Q14.99 14.57 15.38 14.98Q15.77 15.4 16.53 15.4Q16.93 15.4 17.28 15.31Q17.63 15.23 17.89 15.11V15.82Q17.62 15.95 17.22 16.02Q16.83 16.09 16.44 16.09Z" fill="#7a5f70" />
+      <path d="M37.69 39.13Q36.38 39.13 35.35 38.54Q34.32 37.95 33.72 36.82Q33.13 35.69 33.13 34.1Q33.13 32.49 33.73 31.36Q34.33 30.23 35.36 29.64Q36.4 29.05 37.69 29.05Q38.8 29.05 39.7 29.46Q40.61 29.87 41.19 30.65Q41.77 31.43 41.91 32.53H39.88Q39.74 31.74 39.15 31.28Q38.57 30.83 37.73 30.83Q36.58 30.83 35.88 31.68Q35.17 32.53 35.17 34.1Q35.17 35.69 35.88 36.52Q36.59 37.35 37.72 37.35Q38.56 37.35 39.15 36.89Q39.74 36.44 39.88 35.64H41.92Q41.81 36.55 41.27 37.35Q40.74 38.14 39.83 38.64Q38.93 39.13 37.69 39.13Z" />
     </g>
   </g>
 </svg>

@@ -10,18 +10,16 @@
 <p align="center"><strong>Aspiring software developer</strong><br><code>C data structures / offline web apps / study tools</code></p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/profile-card/terminal-still.png">
-    <img src="./assets/profile-card/terminal-dance-loop.png" width="158" alt="My rose-colored pixel-B terminal doing a two-step">
-  </picture>
-</p>
-
-<p align="center">
   <a href="https://www.instagram.com/44_matteo_mat/"><img src="./assets/profile-card/instagram.svg" alt="Instagram — @44_matteo_mat" height="32"></a>
   <a href="#on-my-workbench"><img src="./assets/profile-card/projects.svg" alt="Explore my projects" height="32"></a>
 </p>
 
 ## About me
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/profile-card/terminal-still.png">
+  <img src="./assets/profile-card/terminal-dance-loop.png" width="132" align="right" alt="My rose-colored pixel-B terminal doing a two-step">
+</picture>
 
 I go by **BlushRins** online. Two things I keep track of are what I lifted last week and what I learned in class. That’s where Lift Tracker and Study Hub started.
 
@@ -34,7 +32,7 @@ for (const struct Node *node = head; node != NULL; node = node->next) {
 ```
 
 <p>
-  <img src="./assets/linked-list.svg" width="760" alt="Animated 4-node C linked list traversal from head through nodes 12, 27, 44, and 58 to NULL">
+  <img src="./assets/linked-list.svg" width="720" alt="Animated 4-node C linked list traversal from head through nodes 12, 27, 44, and 58 to NULL">
 </p>
 
 [See how the nodes connect](https://github.com/BlushRins/obsidian-study-vault/blob/HEAD/notes/linked-list-nodes.md)
@@ -63,7 +61,7 @@ Between sets, I want to know what I lifted last time and what to aim for next. L
 **20-second demo.** Open Lift Tracker, pick **Squat**, enter **20 kg** and **5 reps**, then tap **Log set 1**. Refresh and look under **Today** for the set you just saved.
 
 <p>
-  <img src="./assets/workbench/lift-tracker-card.svg" width="540" alt="Lift Tracker sample logged set: Squat, 20 kg times 5 reps, saved offline">
+  <img src="./assets/workbench/lift-tracker-card.svg" width="720" alt="Lift Tracker sample logged set: Squat, 20 kg times 5 reps, saved offline">
 </p>
 
 <p>
@@ -78,7 +76,7 @@ I keep my data structures notes in Obsidian. Study Hub turns the same Markdown f
 **One-byte challenge.** If the rightmost bit represents 0, which numbers belong to the set `0b00101100`?
 
 <p>
-  <img src="./assets/workbench/bit-vector-byte.svg" width="540" alt="8-bit byte visualizer showing 0b00101100 with glowing pastel-pink 1 bits">
+  <img src="./assets/workbench/bit-vector-byte.svg" width="720" alt="8-bit byte visualizer showing 0b00101100 with glowing pastel-pink 1 bits">
 </p>
 
 <details>
