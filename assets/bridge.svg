@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="60" viewBox="0 0 72 60">
+  <title>Arched bridge over water</title>
+  <g stroke="#513648" stroke-width="2" stroke-linejoin="round">
+    <path d="M4 44a32 3 0 0 0 64 0v6a32 4 0 0 1-64 0z" fill="#a67790"/>
+    <path d="M7 40a29 24 0 0 1 58 0v6H55a19 14 0 0 0-38 0H7z" fill="#e9bfae"/>
+    <path d="M3 28h66v8H3z" fill="#d9a8bb"/>
+    <path d="M3 28h66" fill="none" stroke="#f7d9b9"/>
+  </g>
+  <path d="M12 33h4m6 0h4m6 0h4m6 0h4m6 0h4m6 0h4" fill="none" stroke="#fae5cf" stroke-width="2" stroke-linecap="round"/>
+  <path d="M14 53h8m10 0h14m8 0h4" fill="none" stroke="#fae5cf" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+</svg>

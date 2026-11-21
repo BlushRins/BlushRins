@@ -21,7 +21,7 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake.svg?color_snake=#f7b5ca&color_dots=#3b3444,#446b5a,#689777,#96c99b,#c6ecb8
+            dist/snake.svg?color_snake=#c6ecb8&color_dots=#3b3444,#6b4262,#a3557a,#d9799f,#f7b5ca
 
       - name: Match the workbench colors and make a still calendar
         shell: python
@@ -51,12 +51,13 @@ jobs:
           PROFILE_OWNER: ${{ github.repository_owner }}
         shell: python
         run: |
+          import datetime
           import json
           import os
           import subprocess
           from pathlib import Path
 
-          query = """query($login:String!) {
+          query ="""query($login:String!) {
             user(login:$login) { contributionsCollection {
               totalCommitContributions totalPullRequestContributions
               contributionCalendar { totalContributions weeks { contributionDays { contributionCount } } }
@@ -86,6 +87,8 @@ jobs:
                   parts.append(f'<path d="M{x-19} 19v62" stroke="#514353"/>')
               parts.append(f'<text x="{x}" y="51" font-family="monospace" font-size="37" fill="#f7c2d3">{value:,}</text>')
               parts.append(f'<text x="{x}" y="78" font-family="sans-serif" font-size="18" fill="#f4e2d9">{label}</text>')
+          stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
+          parts.append(f'<text x="621" y="16" text-anchor="end" font-family="monospace" font-size="10" fill="#b89fb2">updated {stamp}</text>')
           parts.append("</svg>")
           Path("dist/stats.svg").write_text("\n".join(parts), encoding="utf-8")
 

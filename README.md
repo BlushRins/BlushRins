@@ -37,6 +37,18 @@ for (const struct Node *node = head; node != NULL; node = node->next) {
 
 [See how the nodes connect](https://github.com/BlushRins/obsidian-study-vault/blob/HEAD/notes/linked-list-nodes.md)
 
+Here is where I am in the course. Each checkpoint links to the next, like the nodes above.
+
+<p>
+  <img src="./assets/roadmap.svg" width="720" alt="C data structures roadmap: bit vector and linked list are done, stack is up next, then queue, hash table, and tree">
+</p>
+
+## Right now
+
+<p>
+  <img src="./assets/now-card.svg" width="560" alt="Terminal card: learning C data structures, building camera-trackers, tracking lifts and class notes">
+</p>
+
 ## Languages on my keyboard
 
 Pick a key to explore the code. The PHP key opens the official manual.
@@ -53,6 +65,34 @@ Pick a key to explore the code. The PHP key opens the official manual.
 </p>
 
 ## On my workbench
+
+### <img src="./assets/bridge.svg" alt="" width="52" height="44" align="middle"> SignBridge
+
+I want a conversation to work both ways between someone who signs and someone who speaks. SignBridge is the web app I’m building for that: signs and gestures become speech, and speech becomes live captions.
+
+**Status: in progress.** The repository is still a stub, so the card below is a sketch of the idea, not a screenshot.
+
+<p>
+  <img src="./assets/workbench/signbridge-card.svg" width="720" alt="SignBridge concept sketch: an open hand becomes the spoken word Hello, and speech becomes live captions">
+</p>
+
+<p>
+  <a href="https://github.com/BlushRins/SignBridge"><img src="./assets/workbench/btn-view-source.svg" alt="SignBridge repository on GitHub" height="32"></a>
+</p>
+
+### <img src="./assets/camera.svg" alt="" width="52" height="44" align="middle"> Camera trackers
+
+I wanted my webcam to do something fun. Camera trackers shows a mirrored webcam in a resizable window. Hold a gesture, like a thumbs up, and it loops that gesture’s track and shows its picture on the opposite side. The camera feed is processed locally.
+
+**Try it.** On Linux with a webcam, run `.venv/bin/python -m camera_trackers` and hold a thumbs up for about 0.2 seconds. Lower your hand out of view to stop the music.
+
+<p>
+  <img src="./assets/workbench/camera-trackers-card.svg" width="720" alt="Camera trackers sketch: a mirrored webcam view with a green thumbs-up outline loops a track and shows a picture on the opposite side">
+</p>
+
+<p>
+  <a href="https://github.com/BlushRins/camera-trackers"><img src="./assets/workbench/btn-view-source.svg" alt="View camera trackers source on GitHub" height="32"></a>
+</p>
 
 ### <img src="./assets/weight-plates.svg" alt="" width="52" height="44" align="middle"> Lift Tracker
 
@@ -99,5 +139,14 @@ My past year on GitHub
 
 <picture>
   <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/snake.svg">
-  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/calendar.svg" width="1000" alt="My GitHub contribution calendar for the past year. Brighter green squares mark more active days.">
+  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/calendar.svg" width="1000" alt="My GitHub contribution calendar for the past year. Brighter pink squares mark more active days.">
 </picture>
+
+<p align="center">
+  <img src="./assets/footer.svg" width="720" alt="Thanks for stopping by">
+</p>
+
+<p align="center">
+  <a href="https://www.instagram.com/44_matteo_mat/"><img src="./assets/profile-card/instagram.svg" alt="Instagram — @44_matteo_mat" height="32"></a>
+  <a href="#"><img src="./assets/workbench/btn-back-to-top.svg" alt="Back to top" height="32"></a>
+</p>
