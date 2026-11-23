@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="540" height="104" viewBox="0 0 540 104" role="img" aria-labelledby="rm-title rm-desc">
   <title id="rm-title">C data structures roadmap</title>
-  <desc id="rm-desc">Six checkpoints chained like a linked list: bit vector and linked list are done, stack is up next, then queue, hash table, and tree.</desc>
+  <desc id="rm-desc">Six checkpoints chained like a linked list: bit vector, linked list, hash table, and heaps are done; BST and AVL trees are up next, then graphs.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#241d30"/>
@@ -17,18 +17,18 @@
   <path d="M11 21V11h10M519 11h10v10M11 83v10h10M529 83v10h-10" fill="none" stroke="#987285" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
 
   <text x="18" y="26" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#d9bec9">C ROADMAP · DATA STRUCTURES</text>
-  <text x="522" y="26" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#97c4ab">2 of 6</text>
+  <text x="522" y="26" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#97c4ab">4 of 6</text>
 
   <!-- links between checkpoints -->
   <g fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M90 58h12m-4-3 4 3-4 3" stroke="#f7b5ca"/>
     <path d="M176.8 58h12m-4-3 4 3-4 3" stroke="#f7b5ca"/>
-    <path d="M263.6 58h12m-4-3 4 3-4 3" stroke="#7a6480"/>
-    <path d="M350.4 58h12m-4-3 4 3-4 3" stroke="#7a6480"/>
+    <path d="M263.6 58h12m-4-3 4 3-4 3" stroke="#f7b5ca"/>
+    <path d="M350.4 58h12m-4-3 4 3-4 3" stroke="#f7b5ca"/>
     <path d="M437.2 58h12m-4-3 4 3-4 3" stroke="#7a6480"/>
   </g>
 
-  <!-- done -->
+  <!-- done (4 of 6) -->
   <g>
     <rect x="18" y="44" width="70" height="28" rx="14" fill="#4c3046" stroke="#f7b5ca" stroke-width="1.6"/>
     <text x="53" y="62" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="bold" fill="#fff1e1">bit vector</text>
@@ -41,22 +41,26 @@
     <circle cx="168.8" cy="44" r="6" fill="#f7b5ca"/>
     <path d="M165.8 44l2 2 4-4" fill="none" stroke="#2a1d2b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
+  <g>
+    <rect x="191.6" y="44" width="70" height="28" rx="14" fill="#4c3046" stroke="#f7b5ca" stroke-width="1.6"/>
+    <text x="226.6" y="62" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="bold" fill="#fff1e1">hash table</text>
+    <circle cx="255.6" cy="44" r="6" fill="#f7b5ca"/>
+    <path d="M252.6 44l2 2 4-4" fill="none" stroke="#2a1d2b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g>
+    <rect x="278.4" y="44" width="70" height="28" rx="14" fill="#4c3046" stroke="#f7b5ca" stroke-width="1.6"/>
+    <text x="313.4" y="62" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="bold" fill="#fff1e1">heaps</text>
+    <circle cx="342.4" cy="44" r="6" fill="#f7b5ca"/>
+    <path d="M339.4 44l2 2 4-4" fill="none" stroke="#2a1d2b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 
   <!-- up next -->
-  <rect class="next" x="191.6" y="44" width="70" height="28" rx="14" fill="#342b3e" stroke="#f7b5ca" stroke-width="1.6" stroke-dasharray="3 3"/>
-  <text x="226.6" y="62" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="bold" fill="#fff1e1">stack</text>
-  <path d="M226.6 76l-3 4h6z" fill="#f7c2d3"/>
-  <text x="226.6" y="92" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#f7c2d3">up next</text>
+  <rect class="next" x="365.2" y="44" width="70" height="28" rx="14" fill="#342b3e" stroke="#f7b5ca" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <text x="400.2" y="62" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="bold" fill="#fff1e1">BST / AVL</text>
+  <path d="M400.2 76l-3 4h6z" fill="#f7c2d3"/>
+  <text x="400.2" y="92" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#f7c2d3">up next</text>
 
   <!-- later -->
-  <g fill="#342b3e" stroke="#514353" stroke-width="1.5">
-    <rect x="278.4" y="44" width="70" height="28" rx="14"/>
-    <rect x="365.2" y="44" width="70" height="28" rx="14"/>
-    <rect x="452" y="44" width="70" height="28" rx="14"/>
-  </g>
-  <g text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#9c859e">
-    <text x="313.4" y="62">queue</text>
-    <text x="400.2" y="62">hash table</text>
-    <text x="487" y="62">tree</text>
-  </g>
+  <rect x="452" y="44" width="70" height="28" rx="14" fill="#342b3e" stroke="#514353" stroke-width="1.5"/>
+  <text x="487" y="62" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#9c859e">graphs</text>
 </svg>

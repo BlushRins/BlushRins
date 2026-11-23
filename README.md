@@ -37,18 +37,20 @@ for (const struct Node *node = head; node != NULL; node = node->next) {
   <img src="./assets/linked-list.svg" width="720" alt="Animated 4-node C linked list traversal from head through nodes 12, 27, 44, and 58 to NULL">
 </p>
 
-[See how the nodes connect](https://github.com/BlushRins/obsidian-study-vault/blob/HEAD/notes/linked-list-nodes.md)
+<p>
+  <a href="https://github.com/BlushRins/obsidian-study-vault/blob/HEAD/notes/linked-list-nodes.md"><img src="./assets/workbench/btn-linked-list-notes.svg" alt="See how the nodes connect" height="32"></a>
+</p>
 
 Here is where I am in the course. Each checkpoint links to the next, like the nodes above.
 
 <p>
-  <img src="./assets/roadmap.svg" width="720" alt="C data structures roadmap: bit vector and linked list are done, stack is up next, then queue, hash table, and tree">
+  <img src="./assets/roadmap.svg" width="720" alt="C data structures roadmap: bit vector, linked list, hash table, and heaps are done; BST and AVL trees are up next, then graphs">
 </p>
 
 ## Right now
 
 <p>
-  <img src="./assets/now-card.svg" width="560" alt="Terminal card: learning C data structures, building camera-trackers, tracking lifts and class notes">
+  <img src="./assets/now-card.svg" width="560" alt="Terminal card: learning C trees and data structures, building Lift Tracker and camera-trackers, tracking lifts and class notes">
 </p>
 
 ## Languages on my keyboard
