@@ -13,6 +13,7 @@
 
 <p align="center">
   <a href="https://www.instagram.com/44_matteo_mat/"><img src="./assets/profile-card/instagram.svg" alt="Instagram — @44_matteo_mat" height="32"></a>
+  <a href="mailto:matquerubyn@gmail.com"><img src="./assets/profile-card/email.svg" alt="Email — matquerubyn@gmail.com" height="32"></a>
   <a href="#on-my-workbench"><img src="./assets/profile-card/projects.svg" alt="Explore my projects" height="32"></a>
 </p>
 
@@ -154,5 +155,6 @@ My past year on GitHub
 
 <p align="center">
   <a href="https://www.instagram.com/44_matteo_mat/"><img src="./assets/profile-card/instagram.svg" alt="Instagram — @44_matteo_mat" height="32"></a>
+  <a href="mailto:matquerubyn@gmail.com"><img src="./assets/profile-card/email.svg" alt="Email — matquerubyn@gmail.com" height="32"></a>
   <a href="#top"><img src="./assets/workbench/btn-back-to-top.svg" alt="Back to top" height="32"></a>
 </p>
