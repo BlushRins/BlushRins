@@ -86,12 +86,14 @@ I wanted my webcam to do something fun. Camera trackers shows a mirrored webcam 
 
 **Try it.** On Linux with a webcam, run `.venv/bin/python -m camera_trackers` and hold a thumbs up for about 0.2 seconds. Lower your hand out of view to stop the music.
 
+**Status: private repo.** Source is currently private while in development.
+
 <p>
   <img src="./assets/workbench/camera-trackers-card.svg" width="720" alt="Camera trackers sketch: a mirrored webcam view with a green thumbs-up outline loops a track and shows a picture on the opposite side">
 </p>
 
 <p>
-  <a href="https://github.com/BlushRins/camera-trackers"><img src="./assets/workbench/btn-view-source.svg" alt="View camera trackers source on GitHub" height="32"></a>
+  <img src="./assets/workbench/btn-private-repo.svg" alt="Private repository for now" height="32">
 </p>
 
 ### <img src="./assets/weight-plates.svg" alt="" width="52" height="44" align="middle"> Lift Tracker

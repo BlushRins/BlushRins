@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="32" viewBox="0 0 136 32" role="img">
+  <title>Private repo</title>
+  <rect x=".5" y=".5" width="135" height="31" rx="5" fill="#d8cadf" stroke="#857191"/>
+  <g stroke="#352438" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="11.5" y="15" width="11" height="8" rx="1.8"/>
+    <path d="M14 15v-2.2a3 3 0 0 1 6 0V15"/>
+  </g>
+  <text x="33" y="21" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="bold" fill="#352438">Private repo</text>
+</svg>
