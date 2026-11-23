@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="148" viewBox="0 0 540 148" role="img" aria-labelledby="sb-title sb-desc">
+  <title id="sb-title">SignBridge concept sketch</title>
+  <desc id="sb-desc">Concept sketch, not a screenshot: an open hand becomes the spoken word Hello, and spoken words become live captions.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241d30"/>
+      <stop offset="1" stop-color="#362638"/>
+    </linearGradient>
+    <g id="palm">
+      <rect x="4" y="22" width="32" height="28" rx="10"/>
+      <rect x="5" y="6" width="7" height="26" rx="3.5"/>
+      <rect x="13" y="1" width="7" height="30" rx="3.5"/>
+      <rect x="21" y="3" width="7" height="28" rx="3.5"/>
+      <rect x="29" y="8" width="7" height="24" rx="3.5"/>
+      <rect x="-4" y="28" width="16" height="7" rx="3.5" transform="rotate(-30 4 31.5)"/>
+    </g>
+    <style>
+      .led-halo { transform-origin: 412px 22px; animation: led-breathe 4.2s ease-in-out infinite; }
+      @keyframes led-breathe { 0%, 100% { opacity: .2; transform: scale(.88); } 50% { opacity: .55; transform: scale(1.18); } }
+      .bar { transform-box: fill-box; transform-origin: center; animation: bar 1.3s ease-in-out infinite; }
+      .b2 { animation-delay: .15s; } .b3 { animation-delay: .3s; } .b4 { animation-delay: .45s; } .b5 { animation-delay: .6s; } .b6 { animation-delay: .75s; }
+      @keyframes bar { 0%, 100% { transform: scaleY(.45); } 50% { transform: scaleY(1); } }
+      .caret { animation: caret 1s steps(1) infinite; }
+      @keyframes caret { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="538" height="146" rx="12" fill="url(#bg)" stroke="#5b4760" stroke-width="1.5"/>
+  <path d="M11 21V11h10M519 11h10v10M11 127v10h10M529 127v10h-10" fill="none" stroke="#987285" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="18" y="26" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#d9bec9">SKETCH · TWO-WAY</text>
+  <circle class="led-halo" cx="412" cy="22" r="7" fill="#f7b5ca" opacity=".28"/>
+  <circle cx="412" cy="22" r="3.5" fill="#f7c2d3"/>
+  <text x="424" y="26" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11.5" fill="#f7c2d3">In progress</text>
+
+  <!-- sign to speech -->
+  <rect x="18" y="40" width="236" height="88" rx="9" fill="#243733" stroke="#577467" stroke-width="1.2"/>
+  <text x="30" y="58" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#97c4ab">SIGN → SPEECH</text>
+  <g transform="translate(36 66)">
+    <use href="#palm" fill="#f7b5ca" stroke="#f7b5ca" stroke-width="4" stroke-linejoin="round"/>
+    <use href="#palm" fill="#3a2a3d"/>
+  </g>
+  <g transform="translate(106 66)" fill="#f7b5ca">
+    <path d="M0 4h4l5-4v14l-5-4H0z"/>
+    <path d="M12 3a5 5 0 0 1 0 8M15 0a9 9 0 0 1 0 14" fill="none" stroke="#f7b5ca" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+  <text x="106" y="102" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" font-weight="bold" fill="#fff1e1">Hello</text>
+  <text x="106" y="117" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#97c4ab">spoken aloud</text>
+
+  <!-- bridge arrows -->
+  <path d="M260 76h20m-5-4 5 4-5 4M280 100h-20m5-4-5 4 5 4" fill="none" stroke="#f7b5ca" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- speech to captions -->
+  <rect x="286" y="40" width="236" height="88" rx="9" fill="#243733" stroke="#577467" stroke-width="1.2"/>
+  <text x="298" y="58" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#97c4ab">SPEECH → CAPTIONS</text>
+  <g fill="#f7b5ca">
+    <rect class="bar" x="300" y="86" width="4" height="14" rx="2"/>
+    <rect class="bar b2" x="309" y="76" width="4" height="34" rx="2"/>
+    <rect class="bar b3" x="318" y="68" width="4" height="50" rx="2"/>
+    <rect class="bar b4" x="327" y="80" width="4" height="26" rx="2"/>
+    <rect class="bar b5" x="336" y="72" width="4" height="42" rx="2"/>
+    <rect class="bar b6" x="345" y="88" width="4" height="10" rx="2"/>
+  </g>
+  <rect x="362" y="70" width="148" height="46" rx="8" fill="#2f4a43" stroke="#5d7f70" stroke-width="1.2"/>
+  <text x="372" y="89" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="bold" fill="#fff1e1">Nice to meet</text>
+  <text x="372" y="107" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="bold" fill="#fff1e1">you</text>
+  <rect class="caret" x="401" y="96" width="6" height="12" fill="#f7b5ca"/>
+</svg>

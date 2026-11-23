@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="64" viewBox="0 0 540 64" role="img" aria-label="Thanks for stopping by">
+  <title>Thanks for stopping by</title>
+  <defs>
+    <linearGradient id="line-l" x1="0" x2="1"><stop offset="0" stop-color="#987285" stop-opacity="0"/><stop offset="1" stop-color="#987285" stop-opacity=".7"/></linearGradient>
+    <linearGradient id="line-r" x1="0" x2="1"><stop offset="0" stop-color="#987285" stop-opacity=".7"/><stop offset="1" stop-color="#987285" stop-opacity="0"/></linearGradient>
+    <style>
+      .star { transform-origin: 270px 16px; animation: glow 5s ease-in-out infinite; }
+      @keyframes glow { 50% { opacity: .45; transform: scale(.85); } }
+      .caret { animation: caret 1.1s steps(1) infinite; }
+      @keyframes caret { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+  <path d="M18 16H251" stroke="url(#line-l)" stroke-width="1.4"/>
+  <path d="M289 16H522" stroke="url(#line-r)" stroke-width="1.4"/>
+  <path class="star" d="M270 7l2.6 6.4L279 16l-6.4 2.6L270 25l-2.6-6.4L261 16l6.4-2.6z" fill="#f7b5ca"/>
+  <text x="270" y="50" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11.5" fill="#b89fb2">thanks for stopping by</text>
+  <rect class="caret" x="352" y="40" width="7" height="12" fill="#f7b5ca"/>
+</svg>

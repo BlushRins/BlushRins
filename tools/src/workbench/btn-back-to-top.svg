@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="32" viewBox="0 0 140 32" role="img">
+  <title>Back to top</title>
+  <rect x=".5" y=".5" width="139" height="31" rx="5" fill="#edbdc8" stroke="#916b7c"/>
+  <g stroke="#412a38" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 21V11"/>
+    <path d="M11.5 15.5 16 11l4.5 4.5"/>
+  </g>
+  <text x="34" y="21" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="bold" fill="#412a38">Back to top</text>
+</svg>

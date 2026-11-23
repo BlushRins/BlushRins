@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="134" viewBox="0 0 540 134" role="img" aria-labelledby="bv-title bv-desc">
+  <title id="bv-title">8-bit byte visualizer for 0b00101100</title>
+  <desc id="bv-desc">Eight bit slots for 0b00101100 where the three active 1 bits softly glow in pastel pink.</desc>
+  <defs>
+    <linearGradient id="bv-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241d30"/>
+      <stop offset="1" stop-color="#362638"/>
+    </linearGradient>
+    <style>
+      .bit-glow {
+        animation: bit-pulse 3.8s ease-in-out infinite;
+      }
+      .d1 { animation-delay: 0s; }
+      .d2 { animation-delay: 0.6s; }
+      .d3 { animation-delay: 1.2s; }
+      @keyframes bit-pulse {
+        0%, 100% { opacity: .16; }
+        50% { opacity: .55; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; }
+      }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="538" height="132" rx="12" fill="url(#bv-bg)" stroke="#5b4760" stroke-width="1.5"/>
+  <path d="M11 21V11h10M519 11h10v10M11 113v10h10M529 113v10h-10" fill="none" stroke="#987285" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="22" y="27" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" fill="#b89fb2">0b<tspan font-weight="bold" fill="#f7c2d3">00101100</tspan></text>
+  <text x="518" y="27" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" fill="#97c4ab">8-BIT VECTOR · MSB → LSB</text>
+
+  <!-- Upper nibble: 0 0 1 0 -->
+  <rect x="22" y="42" width="54" height="58" rx="8" fill="#342b3e" stroke="#514353" stroke-width="1.5"/>
+  <text x="49" y="79" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" fill="#9c859e">0</text>
+
+  <rect x="84" y="42" width="54" height="58" rx="8" fill="#342b3e" stroke="#514353" stroke-width="1.5"/>
+  <text x="111" y="79" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" fill="#9c859e">0</text>
+
+  <rect class="bit-glow d1" x="143.5" y="39.5" width="59" height="63" rx="10.5" fill="none" stroke="#f7b5ca" stroke-width="3" opacity=".35"/>
+  <rect x="146" y="42" width="54" height="58" rx="8" fill="#4c3046" stroke="#f7b5ca" stroke-width="1.8"/>
+  <circle cx="173" cy="51" r="2.2" fill="#f7b5ca"/>
+  <text x="173" y="79" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" font-weight="bold" fill="#fff1e1">1</text>
+
+  <rect x="208" y="42" width="54" height="58" rx="8" fill="#342b3e" stroke="#514353" stroke-width="1.5"/>
+  <text x="235" y="79" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" fill="#9c859e">0</text>
+
+  <!-- Lower nibble: 1 1 0 0 -->
+  <rect class="bit-glow d2" x="275.5" y="39.5" width="59" height="63" rx="10.5" fill="none" stroke="#f7b5ca" stroke-width="3" opacity=".35"/>
+  <rect x="278" y="42" width="54" height="58" rx="8" fill="#4c3046" stroke="#f7b5ca" stroke-width="1.8"/>
+  <circle cx="305" cy="51" r="2.2" fill="#f7b5ca"/>
+  <text x="305" y="79" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" font-weight="bold" fill="#fff1e1">1</text>
+
+  <rect class="bit-glow d3" x="337.5" y="39.5" width="59" height="63" rx="10.5" fill="none" stroke="#f7b5ca" stroke-width="3" opacity=".35"/>
+  <rect x="340" y="42" width="54" height="58" rx="8" fill="#4c3046" stroke="#f7b5ca" stroke-width="1.8"/>
+  <circle cx="367" cy="51" r="2.2" fill="#f7b5ca"/>
+  <text x="367" y="79" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" font-weight="bold" fill="#fff1e1">1</text>
+
+  <rect x="402" y="42" width="54" height="58" rx="8" fill="#342b3e" stroke="#514353" stroke-width="1.5"/>
+  <text x="429" y="79" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" fill="#9c859e">0</text>
+
+  <rect x="464" y="42" width="54" height="58" rx="8" fill="#342b3e" stroke="#514353" stroke-width="1.5"/>
+  <text x="491" y="79" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" fill="#9c859e">0</text>
+
+  <text x="49" y="119" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#b89fb2">MSB</text>
+  <text x="270" y="119" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" fill="#97c4ab">1 byte = 8 membership flags</text>
+  <text x="491" y="119" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="bold" fill="#f7c2d3">bit 0</text>
+</svg>

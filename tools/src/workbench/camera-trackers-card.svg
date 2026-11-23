@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="168" viewBox="0 0 540 168" role="img" aria-labelledby="ct-title ct-desc">
+  <title id="ct-title">Camera trackers sample scene</title>
+  <desc id="ct-desc">Sketch of a mirrored webcam view with a green thumbs-up hand outline, a looping track, and a picture shown on the opposite side of the window.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241d30"/>
+      <stop offset="1" stop-color="#362638"/>
+    </linearGradient>
+    <linearGradient id="pic" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b3350"/>
+      <stop offset="1" stop-color="#6b4262"/>
+    </linearGradient>
+    <clipPath id="pic-clip"><rect x="346" y="50" width="166" height="90" rx="6"/></clipPath>
+    <style>
+      .led-halo { transform-origin: 412px 22px; animation: led-breathe 4.2s ease-in-out infinite; }
+      @keyframes led-breathe { 0%, 100% { opacity: .2; transform: scale(.88); } 50% { opacity: .55; transform: scale(1.18); } }
+      .eq { transform-box: fill-box; transform-origin: bottom; animation: eq 1.1s ease-in-out infinite; }
+      .eq2 { animation-delay: .25s; }
+      .eq3 { animation-delay: .5s; }
+      @keyframes eq { 0%, 100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="538" height="166" rx="12" fill="url(#bg)" stroke="#5b4760" stroke-width="1.5"/>
+  <path d="M11 21V11h10M519 11h10v10M11 147v10h10M529 147v10h-10" fill="none" stroke="#987285" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="18" y="26" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#d9bec9">SAMPLE · THUMBS UP HELD</text>
+  <circle class="led-halo" cx="412" cy="22" r="7" fill="#96c99b" opacity=".28"/>
+  <circle cx="412" cy="22" r="3.5" fill="#c6ecb8"/>
+  <text x="424" y="26" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11.5" fill="#c5eecb">Scene active</text>
+
+  <rect x="18" y="40" width="504" height="110" rx="9" fill="#243733" stroke="#577467" stroke-width="1.2"/>
+
+  <!-- mirrored webcam view -->
+  <rect x="28" y="50" width="300" height="90" rx="6" fill="#1d2c29" stroke="#3d5a50" stroke-width="1.2"/>
+  <g transform="translate(150 62)">
+    <path d="M13 66H43A13 13 0 0 0 56 53V39A13 13 0 0 0 43 26H23V8.5A8.5 8.5 0 0 0 6 8.5V26H13A13 13 0 0 0 0 39V53A13 13 0 0 0 13 66Z" fill="#243733" stroke="#c6ecb8" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M24 38h26M24 47h26M24 56h22" fill="none" stroke="#97c4ab" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+    <g fill="#f7b5ca">
+      <circle cx="14.5" cy="4" r="2.4"/><circle cx="14.5" cy="22" r="2.4"/>
+      <circle cx="50" cy="30" r="2.4"/><circle cx="50" cy="60" r="2.4"/>
+      <circle cx="6" cy="34" r="2.4"/><circle cx="6" cy="60" r="2.4"/>
+    </g>
+  </g>
+  <text x="38" y="134" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#97c4ab">thumb-up</text>
+  <text x="286" y="134" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#97c4ab">looping</text>
+  <g fill="#f7b5ca">
+    <rect class="eq" x="292" y="122" width="5" height="12" rx="1.5"/>
+    <rect class="eq eq2" x="300" y="122" width="5" height="12" rx="1.5"/>
+    <rect class="eq eq3" x="308" y="122" width="5" height="12" rx="1.5"/>
+  </g>
+
+  <!-- picture on the opposite side -->
+  <g clip-path="url(#pic-clip)">
+    <rect x="346" y="50" width="166" height="90" fill="url(#pic)"/>
+    <circle cx="430" cy="98" r="13" fill="#f7c2d3"/>
+    <path d="M346 140L380 100L402 122L430 92L462 126L486 108L512 140Z" fill="#446b5a"/>
+    <path d="M346 140L372 118L400 140Z" fill="#243733"/>
+    <path d="M440 140L470 120L512 140Z" fill="#243733"/>
+  </g>
+  <rect x="346" y="50" width="166" height="90" rx="6" fill="none" stroke="#5d7f70" stroke-width="1.2"/>
+  <text x="356" y="65" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" fill="#e6d0dc">picture · opposite side</text>
+</svg>
