@@ -159,7 +159,8 @@ def make_light(src, dst):
 # ---- keycaps
 KEYS = {  # file: (ext legend, main legend)
     "c": (".c", "C"), "java": (".java", "Java"), "php": (".php", "PHP"), "shell": (".sh", "Shell"),
-    "html": (".html", "HTML"), "css": (".css", "CSS"), "javascript": (".js", "JavaScript"), "typescript": (".ts", "TypeScript"),
+    "python": (".py", "Python"), "html": (".html", "HTML"), "css": (".css", "CSS"),
+    "javascript": (".js", "JavaScript"), "typescript": (".ts", "TypeScript"),
 }
 MONO = 'ui-monospace,SFMono-Regular,Menlo,Consolas,monospace'
 SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"

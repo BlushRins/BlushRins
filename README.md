@@ -63,6 +63,7 @@ Pick a key to explore the code. The PHP key opens the official manual.
   <a href="https://github.com/BlushRins/EmployeeProject_Llenos/blob/HEAD/src/version3/HourlyEmployee.java"><img src="./assets/keycaps/java.svg" width="76" alt="Java — Read the Java HourlyEmployee class"></a>
   <a href="https://www.php.net/manual/en/language.oop5.basic.php"><img src="./assets/keycaps/php.svg" width="76" alt="PHP — Explore PHP classes in the official manual"></a>
   <a href="https://github.com/BlushRins/obsidian-study-vault/blob/HEAD/.githooks/pre-commit"><img src="./assets/keycaps/shell.svg" width="76" alt="Shell — Read the shell pre-commit hook"></a>
+  <a href="https://github.com/BlushRins/BlushRins/blob/HEAD/tools/build.py"><img src="./assets/keycaps/python.svg" width="76" alt="Python — Read the profile SVG build script in Python"></a>
   <a href="https://github.com/BlushRins/millennium-command-center-site/blob/HEAD/index.html"><img src="./assets/keycaps/html.svg" width="76" alt="HTML — Read the command center HTML"></a>
   <a href="https://github.com/BlushRins/millennium-command-center-site/blob/HEAD/style.css"><img src="./assets/keycaps/css.svg" width="76" alt="CSS — Read the command center stylesheet"></a>
   <a href="https://github.com/BlushRins/lift-tracker/blob/HEAD/sw.js"><img src="./assets/keycaps/javascript.svg" width="76" alt="JavaScript — Read the Lift Tracker service worker in JavaScript"></a>
