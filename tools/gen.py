@@ -25,8 +25,16 @@ MISSING = set()
 
 
 def num(v):
-    s = f"{v:.2f}".rstrip("0").rstrip(".")
+    s = f"{v:.1f}".rstrip("0").rstrip(".")
     return "0" if s in ("-0", "") else s
+
+
+def compact_path(d):
+    """Strip redundant spaces around SVG path commands and negative coordinates."""
+    d = re.sub(r"\s*([MLHVCSQTAZmlhvcsqtaz])\s*", r"\1", d)
+    d = re.sub(r"\s+", " ", d)
+    d = re.sub(r" (?=-)", "", d)
+    return d.strip()
 
 
 def family(attr):
@@ -58,7 +66,7 @@ def outline(font, text, size, x, y):
         gs[g].draw(TransformPen(pen, (s, 0, 0, -s, x, y)))
         d.append(pen.getCommands())
         x += hmtx[g][0] * s
-    return "".join(d)
+    return compact_path("".join(d))
 
 
 SKIP = {"font-family", "font-size", "font-weight", "text-anchor", "x", "y"}
@@ -104,6 +112,7 @@ def convert_text(el):
 def outline_file(path):
     tree = ET.parse(path)
     root = tree.getroot()
+    root.setdefault("role", "img") if hasattr(root, "setdefault") else root.attrib.setdefault("role", "img")
     n = 0
     INHERIT = ("font-family", "font-size", "font-weight", "text-anchor")
 

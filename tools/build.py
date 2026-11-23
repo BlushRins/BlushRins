@@ -28,8 +28,7 @@ def main() -> int:
         dest = assets_root / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(src_svg, dest)
-        text = dest.read_text(encoding="utf-8")
-        n = gen.outline_file(str(dest)) if "<text" in text else 0
+        n = gen.outline_file(str(dest))
         built += 1
         print(f"assets/{rel.as_posix()}: {n} text nodes outlined")
 

@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="72" height="60" viewBox="0 0 72 60">
+<svg xmlns="http://www.w3.org/2000/svg" role="img" width="72" height="60" viewBox="0 0 72 60">
   <title>Webcam on a stand</title>
   <g stroke="#513648" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
-    <path d="M30 47h12v6H30z" fill="#a67790"/>
-    <path d="M20 54h32" fill="none"/>
-    <rect x="8" y="9" width="56" height="38" rx="12" fill="#e9bfae"/>
-    <circle cx="36" cy="28" r="15" fill="#a77c91"/>
-    <circle cx="36" cy="28" r="10" fill="#f7d9b9"/>
-    <circle cx="36" cy="28" r="4.5" fill="#604758"/>
+    <path d="M30 47h12v6H30z" fill="#a67790" />
+    <path d="M20 54h32" fill="none" />
+    <rect x="8" y="9" width="56" height="38" rx="12" fill="#e9bfae" />
+    <circle cx="36" cy="28" r="15" fill="#a77c91" />
+    <circle cx="36" cy="28" r="10" fill="#f7d9b9" />
+    <circle cx="36" cy="28" r="4.5" fill="#604758" />
   </g>
-  <circle cx="57" cy="17" r="2.2" fill="#b5d4af" stroke="#425d52" stroke-width="1.2"/>
-  <path d="M31 24a7 7 0 0 1 4-3" fill="none" stroke="#fae5cf" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="57" cy="17" r="2.2" fill="#b5d4af" stroke="#425d52" stroke-width="1.2" />
+  <path d="M31 24a7 7 0 0 1 4-3" fill="none" stroke="#fae5cf" stroke-width="1.8" stroke-linecap="round" />
 </svg>
