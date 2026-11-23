@@ -1,16 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 100" role="img">
-<title>Past year on GitHub — 325 contributions, 24 active days, 158 commits, 24 pull requests</title>
-<rect width="640" height="100" rx="9" fill="#251f2d"/>
-<text x="19" y="51" font-family="monospace" font-size="37" fill="#f7c2d3">325</text>
-<text x="19" y="78" font-family="sans-serif" font-size="18" fill="#f4e2d9">Contributions</text>
-<path d="M160 19v62" stroke="#514353"/>
-<text x="179" y="51" font-family="monospace" font-size="37" fill="#f7c2d3">24</text>
-<text x="179" y="78" font-family="sans-serif" font-size="18" fill="#f4e2d9">Active days</text>
-<path d="M320 19v62" stroke="#514353"/>
-<text x="339" y="51" font-family="monospace" font-size="37" fill="#f7c2d3">158</text>
-<text x="339" y="78" font-family="sans-serif" font-size="18" fill="#f4e2d9">Commits</text>
-<path d="M480 19v62" stroke="#514353"/>
-<text x="499" y="51" font-family="monospace" font-size="37" fill="#f7c2d3">24</text>
-<text x="499" y="78" font-family="sans-serif" font-size="18" fill="#f4e2d9">Pull requests</text>
-<text x="621" y="16" text-anchor="end" font-family="monospace" font-size="10" fill="#b89fb2">updated 2026-11-23</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="112" viewBox="0 0 720 112" role="img">
+<title>Past year on GitHub — 339 contributions, 25 active days, 158 commits, 28 pull requests</title>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#241d30"/><stop offset="1" stop-color="#362638"/></linearGradient></defs>
+<rect x="1" y="1" width="718" height="110" rx="12" fill="url(#bg)" stroke="#5b4760" stroke-width="1.5"/>
+<path d="M11 21V11h10M699 11h10v10M11 91v10h10M709 91v10h-10" fill="none" stroke="#987285" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="700" y="21" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" fill="#b89fb2">updated 2026-11-23</text>
+<text x="26" y="60" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="35" font-weight="bold" fill="#f7c2d3">339</text>
+<text x="26" y="87" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15.5" fill="#f4e2d9">Contributions</text>
+<path d="M180 24v64" stroke="#514353" stroke-width="1.2"/>
+<text x="206" y="60" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="35" font-weight="bold" fill="#f7c2d3">25</text>
+<text x="206" y="87" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15.5" fill="#f4e2d9">Active days</text>
+<path d="M360 24v64" stroke="#514353" stroke-width="1.2"/>
+<text x="386" y="60" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="35" font-weight="bold" fill="#f7c2d3">158</text>
+<text x="386" y="87" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15.5" fill="#f4e2d9">Commits</text>
+<path d="M540 24v64" stroke="#514353" stroke-width="1.2"/>
+<text x="566" y="60" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="35" font-weight="bold" fill="#f7c2d3">28</text>
+<text x="566" y="87" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15.5" fill="#f4e2d9">Pull requests</text>
 </svg>
