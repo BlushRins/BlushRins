@@ -1,3 +1,5 @@
+<a id="top"></a>
+
 <picture>
   <source media="(max-width: 640px) and (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/introduction-mobile-still.png">
   <source media="(max-width: 640px)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/main/assets/introduction-mobile-loop.png">
@@ -150,5 +152,5 @@ My past year on GitHub
 
 <p align="center">
   <a href="https://www.instagram.com/44_matteo_mat/"><img src="./assets/profile-card/instagram.svg" alt="Instagram — @44_matteo_mat" height="32"></a>
-  <a href="#"><img src="./assets/workbench/btn-back-to-top.svg" alt="Back to top" height="32"></a>
+  <a href="#top"><img src="./assets/workbench/btn-back-to-top.svg" alt="Back to top" height="32"></a>
 </p>
