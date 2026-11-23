@@ -68,36 +68,6 @@ Pick a key to explore the code. The PHP key opens the official manual.
 
 ## On my workbench
 
-### <img src="./assets/bridge.svg" alt="" width="52" height="44" align="middle"> SignBridge
-
-I want a conversation to work both ways between someone who signs and someone who speaks. SignBridge is the web app I’m building for that: signs and gestures become speech, and speech becomes live captions.
-
-**Status: in progress.** The repository is still a stub, so the card below is a sketch of the idea, not a screenshot.
-
-<p>
-  <img src="./assets/workbench/signbridge-card.svg" width="720" alt="SignBridge concept sketch: an open hand becomes the spoken word Hello, and speech becomes live captions">
-</p>
-
-<p>
-  <a href="https://github.com/BlushRins/SignBridge"><img src="./assets/workbench/btn-view-source.svg" alt="SignBridge repository on GitHub" height="32"></a>
-</p>
-
-### <img src="./assets/camera.svg" alt="" width="52" height="44" align="middle"> Camera trackers
-
-I wanted my webcam to do something fun. Camera trackers shows a mirrored webcam in a resizable window. Hold a gesture, like a thumbs up, and it loops that gesture’s track and shows its picture on the opposite side. The camera feed is processed locally.
-
-**Try it.** On Linux with a webcam, run `.venv/bin/python -m camera_trackers` and hold a thumbs up for about 0.2 seconds. Lower your hand out of view to stop the music.
-
-**Status: private repo.** Source is currently private while in development.
-
-<p>
-  <img src="./assets/workbench/camera-trackers-card.svg" width="720" alt="Camera trackers sketch: a mirrored webcam view with a green thumbs-up outline loops a track and shows a picture on the opposite side">
-</p>
-
-<p>
-  <img src="./assets/workbench/btn-private-repo.svg" alt="Private repository for now" height="32">
-</p>
-
 ### <img src="./assets/weight-plates.svg" alt="" width="52" height="44" align="middle"> Lift Tracker
 
 Between sets, I want to know what I lifted last time and what to aim for next. Lift Tracker keeps both on one screen, logs sets offline, and saves the history on my phone.
@@ -133,6 +103,36 @@ I keep my data structures notes in Obsidian. Study Hub turns the same Markdown f
 <p>
   <a href="https://github.com/BlushRins/Studyhub/blob/HEAD/content/Bit-Vector%20Sets.md#1-the-core-idea"><img src="./assets/workbench/btn-bit-vector.svg" alt="Explore the bit-vector notes" height="32"></a>
   <a href="https://github.com/BlushRins/Studyhub"><img src="./assets/workbench/btn-view-source.svg" alt="View Study Hub source on GitHub" height="32"></a>
+</p>
+
+### <img src="./assets/camera.svg" alt="" width="52" height="44" align="middle"> Camera trackers
+
+I wanted my webcam to do something fun. Camera trackers shows a mirrored webcam in a resizable window. Hold a gesture, like a thumbs up, and it loops that gesture’s track and shows its picture on the opposite side. The camera feed is processed locally.
+
+**Try it.** On Linux with a webcam, run `.venv/bin/python -m camera_trackers` and hold a thumbs up for about 0.2 seconds. Lower your hand out of view to stop the music.
+
+**Status: private repo.** Source is currently private while in development.
+
+<p>
+  <img src="./assets/workbench/camera-trackers-card.svg" width="720" alt="Camera trackers sketch: a mirrored webcam view with a green thumbs-up outline loops a track and shows a picture on the opposite side">
+</p>
+
+<p>
+  <img src="./assets/workbench/btn-private-repo.svg" alt="Private repository for now" height="32">
+</p>
+
+### <img src="./assets/bridge.svg" alt="" width="52" height="44" align="middle"> SignBridge
+
+I want a conversation to work both ways between someone who signs and someone who speaks. SignBridge is the web app I’m building for that: signs and gestures become speech, and speech becomes live captions.
+
+**Status: in progress.** The repository is still a stub, so the card below is a sketch of the idea, not a screenshot.
+
+<p>
+  <img src="./assets/workbench/signbridge-card.svg" width="720" alt="SignBridge concept sketch: an open hand becomes the spoken word Hello, and speech becomes live captions">
+</p>
+
+<p>
+  <a href="https://github.com/BlushRins/SignBridge"><img src="./assets/workbench/btn-view-source.svg" alt="SignBridge repository on GitHub" height="32"></a>
 </p>
 
 ## Contribution trail
