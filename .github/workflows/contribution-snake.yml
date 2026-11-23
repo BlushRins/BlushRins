@@ -29,20 +29,41 @@ jobs:
           from pathlib import Path
           import xml.etree.ElementTree as ET
 
-          ET.register_namespace("", "http://www.w3.org/2000/svg")
+          NS = "http://www.w3.org/2000/svg"
+          ET.register_namespace("", NS)
           path = Path("dist/snake.svg")
           tree = ET.parse(path)
           svg = tree.getroot()
-          x, y, width, height = svg.attrib["viewBox"].split()
-          panel = ET.Element("{http://www.w3.org/2000/svg}rect", {
-              "x": x, "y": y, "width": width, "height": height,
-              "rx": "10", "fill": "#251f2d",
+          svg.set("role", "img")
+          x, y, width, height = (float(v) for v in svg.attrib["viewBox"].split())
+
+          panel = ET.Element(f"{{{NS}}}rect", {
+              "x": f"{x + 1:g}", "y": f"{y + 1:g}",
+              "width": f"{width - 2:g}", "height": f"{height - 2:g}",
+              "rx": "12", "fill": "#251f2d",
+              "stroke": "#5b4760", "stroke-width": "1.5",
           })
+          bx0, by0 = x + 12, y + 12
+          bx1, by1 = x + width - 12, y + height - 12
+          brackets = ET.Element(f"{{{NS}}}path", {
+              "d": (
+                  f"M{bx0:g} {by0 + 12:g}V{by0:g}h12"
+                  f"M{bx1 - 12:g} {by0:g}h12v12"
+                  f"M{bx0:g} {by1 - 12:g}v12h12"
+                  f"M{bx1:g} {by1 - 12:g}v12h-12"
+              ),
+              "fill": "none", "stroke": "#987285",
+              "stroke-width": "1.4", "stroke-linecap": "round", "stroke-linejoin": "round",
+          })
+          svg.insert(0, brackets)
           svg.insert(0, panel)
+
+          rm_style = ET.SubElement(svg, f"{{{NS}}}style")
+          rm_style.text = "@media (prefers-reduced-motion: reduce) { * { animation: none !important; } .s, .u { display: none; } }"
           tree.write(path, encoding="utf-8")
 
-          style = ET.SubElement(svg, "{http://www.w3.org/2000/svg}style")
-          style.text = "*{animation:none!important}.s,.u{display:none}"
+          still_style = ET.SubElement(svg, f"{{{NS}}}style")
+          still_style.text = "*{animation:none!important}.s,.u{display:none}"
           tree.write("dist/calendar.svg", encoding="utf-8")
 
       - name: Summarize the past year on GitHub
@@ -57,7 +78,7 @@ jobs:
           import subprocess
           from pathlib import Path
 
-          query ="""query($login:String!) {
+          query = """query($login:String!) {
             user(login:$login) { contributionsCollection {
               totalCommitContributions totalPullRequestContributions
               contributionCalendar { totalContributions weeks { contributionDays { contributionCount } } }
@@ -76,21 +97,25 @@ jobs:
               ("Pull requests", activity["totalPullRequestContributions"]),
           ]
           summary = ", ".join(f"{value:,} {label.lower()}" for label, value in metrics)
+          mono = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
+          sans = "-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+          stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
           parts = [
-              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 100" role="img">',
+              '<svg xmlns="http://www.w3.org/2000/svg" width="720" height="112" viewBox="0 0 720 112" role="img">',
               f"<title>Past year on GitHub — {summary}</title>",
-              '<rect width="640" height="100" rx="9" fill="#251f2d"/>',
+              '<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#241d30"/><stop offset="1" stop-color="#362638"/></linearGradient></defs>',
+              '<rect x="1" y="1" width="718" height="110" rx="12" fill="url(#bg)" stroke="#5b4760" stroke-width="1.5"/>',
+              '<path d="M11 21V11h10M699 11h10v10M11 91v10h10M709 91v10h-10" fill="none" stroke="#987285" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>',
+              f'<text x="700" y="21" text-anchor="end" font-family="{mono}" font-size="10.5" fill="#b89fb2">updated {stamp}</text>',
           ]
           for i, (label, value) in enumerate(metrics):
-              x = 19 + i * 160
+              x = 26 + i * 180
               if i:
-                  parts.append(f'<path d="M{x-19} 19v62" stroke="#514353"/>')
-              parts.append(f'<text x="{x}" y="51" font-family="monospace" font-size="37" fill="#f7c2d3">{value:,}</text>')
-              parts.append(f'<text x="{x}" y="78" font-family="sans-serif" font-size="18" fill="#f4e2d9">{label}</text>')
-          stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
-          parts.append(f'<text x="621" y="16" text-anchor="end" font-family="monospace" font-size="10" fill="#b89fb2">updated {stamp}</text>')
+                  parts.append(f'<path d="M{i * 180} 24v64" stroke="#514353" stroke-width="1.2"/>')
+              parts.append(f'<text x="{x}" y="60" font-family="{mono}" font-size="35" font-weight="bold" fill="#f7c2d3">{value:,}</text>')
+              parts.append(f'<text x="{x}" y="87" font-family="{sans}" font-size="15.5" fill="#f4e2d9">{label}</text>')
           parts.append("</svg>")
-          Path("dist/stats.svg").write_text("\n".join(parts), encoding="utf-8")
+          Path("dist/stats.svg").write_text("\n".join(parts) + "\n", encoding="utf-8")
 
       - name: Publish the calendar images
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4

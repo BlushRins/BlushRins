@@ -143,12 +143,16 @@ I want a conversation to work both ways between someone who signs and someone wh
 
 My past year on GitHub
 
-![Past-year totals for contributions, active days, commits, and pull requests](https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/stats.svg)
+<p>
+  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/stats.svg" width="720" alt="Past-year totals for contributions, active days, commits, and pull requests">
+</p>
 
-<picture>
-  <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/snake.svg">
-  <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/calendar.svg" width="1000" alt="My GitHub contribution calendar for the past year. Brighter pink squares mark more active days.">
-</picture>
+<p>
+  <picture>
+    <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/snake.svg">
+    <img src="https://raw.githubusercontent.com/BlushRins/BlushRins/contribution-art/calendar.svg" width="720" alt="My GitHub contribution calendar for the past year. Brighter pink squares mark more active days.">
+  </picture>
+</p>
 
 <p align="center">
   <img src="./assets/footer.svg" width="720" alt="Thanks for stopping by">
