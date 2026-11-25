@@ -89,7 +89,7 @@ Between sets, I want to know what I lifted last time and what to aim for next. L
 
 ### <img src="./assets/notebook.svg" alt="" width="52" height="44" align="middle"> Study Hub
 
-I keep my data structures notes in Obsidian. Study Hub turns the same Markdown files into a web reader with code examples and diagrams. My bit-vector notes show how eight yes-or-no answers fit into a single byte.
+I keep my data structures notes in Obsidian. Study Hub turns the same Markdown files into a web reader with code examples and diagrams. My bit-vector notes show how eight yes-or-no answers fit into a single byte. The [public Obsidian study vault](https://github.com/BlushRins/obsidian-study-vault) has standalone C notes on linked-list nodes and insertion.
 
 **One-byte challenge.** If the rightmost bit represents 0, which numbers belong to the set `0b00101100`?
 
