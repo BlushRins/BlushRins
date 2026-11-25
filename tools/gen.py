@@ -2,9 +2,13 @@
 """Profile asset generator: keycap legends, light-mode card variants, text->outline.
 
 Run from anywhere: python3 -I gen.py <assets_dir> <step>
-steps: keys | light | outline
+steps: keys | outline
 """
-import re, sys, copy
+import os
+import re
+import sys
+from functools import cache
+from pathlib import Path
 import xml.etree.ElementTree as ET
 from fontTools.ttLib import TTCollection, TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
@@ -14,13 +18,25 @@ SVG = "http://www.w3.org/2000/svg"
 ET.register_namespace("", SVG)
 q = lambda t: f"{{{SVG}}}{t}"
 
-_c = TTCollection("/usr/share/fonts/inter/Inter.ttc")
-FONTS = {
-    ("sans", False): _c.fonts[0],   # Inter Regular
-    ("sans", True): _c.fonts[14],   # Inter Bold
-    ("mono", False): TTFont("/usr/share/fonts/noto/NotoSansMono-Regular.ttf"),
-    ("mono", True): TTFont("/usr/share/fonts/noto/NotoSansMono-Bold.ttf"),
-}
+FONT_ROOT = Path(os.environ.get("PROFILE_FONT_ROOT", "/usr/share/fonts"))
+
+
+@cache
+def font_for(family, bold):
+    weight = "Bold" if bold else "Regular"
+    if family == "mono":
+        return TTFont(FONT_ROOT / "noto" / f"NotoSansMono-{weight}.ttf")
+
+    path = FONT_ROOT / "inter" / "Inter.ttc"
+    collection = TTCollection(path)
+    name = f"Inter-{weight}"
+    expected_weight = 700 if bold else 400
+    for font in collection.fonts:
+        if font["name"].getDebugName(6) == name and font["OS/2"].usWeightClass == expected_weight:
+            return font
+    raise ValueError(f"{path} does not contain the {name} face")
+
+
 MISSING = set()
 
 
@@ -89,13 +105,13 @@ def convert_text(el):
         if ts.tail:
             runs.append((ts.tail, bold, {}))
 
-    total = sum(measure(FONTS[(fam, b)], t, size) for t, b, _ in runs)
+    total = sum(measure(font_for(fam, b), t, size) for t, b, _ in runs)
     cx = x - (total / 2 if anchor == "middle" else total if anchor == "end" else 0)
 
     base = {k: v for k, v in el.attrib.items() if k not in SKIP}
     paths = []
     for t, b, extra in runs:
-        f = FONTS[(fam, b)]
+        f = font_for(fam, b)
         d = outline(f, t, size, cx, y)
         cx += measure(f, t, size)
         if d:
@@ -112,7 +128,7 @@ def convert_text(el):
 def outline_file(path):
     tree = ET.parse(path)
     root = tree.getroot()
-    root.setdefault("role", "img") if hasattr(root, "setdefault") else root.attrib.setdefault("role", "img")
+    root.attrib.setdefault("role", "img")
     n = 0
     INHERIT = ("font-family", "font-size", "font-weight", "text-anchor")
 
@@ -130,39 +146,9 @@ def outline_file(path):
     walk(root, {})
     ET.indent(tree, space="  ")
     tree.write(path, encoding="unicode", xml_declaration=False)
-    with open(path, "a") as fh:
+    with open(path, "a", encoding="utf-8") as fh:
         fh.write("\n")
     return n
-
-
-# ---- light-mode palette (dark card hex -> light card hex)
-LIGHT = {
-    # backgrounds / gradient stops
-    "#241d30": "#fffaf7", "#34253a": "#fdeff2", "#402c43": "#f9e2ea", "#362638": "#fbe9ef",
-    "#342940": "#f6e6ec", "#2b2334": "#f3e1e8",
-    # frame
-    "#5b4760": "#d9bcc8", "#987285": "#c4879b",
-    # muted / label text
-    "#b89fb2": "#85667d", "#9c859e": "#9a7f93", "#d9bec9": "#6d5167", "#8c6d82": "#a9849a",
-    # green text + led
-    "#97c4ab": "#3c7a5b", "#c5eecb": "#2f6b4c", "#c6ecb8": "#4a9a68", "#96c99b": "#7cc590", "#e6f6b9": "#58761f",
-    # pink
-    "#f7c2d3": "#b8456d", "#f7b5ca": "#e0698f",
-    # cream text
-    "#fff1e1": "#352733",
-    # panels
-    "#342b3e": "#f6e8ee", "#514353": "#dcc3cf", "#4c3046": "#fcdce6",
-    "#243733": "#e5f3e8", "#577467": "#9bc4a9", "#2f4a43": "#d1e9d8", "#5d7f70": "#8dbb9f",
-}
-
-
-def make_light(src, dst):
-    s = open(src).read()
-    seen = set(h.lower() for h in re.findall(r"#[0-9a-fA-F]{6}", s))
-    unmapped = sorted(seen - set(LIGHT) - {"#2a1d2b", "#ffffff"})
-    out = re.sub(r"#[0-9a-fA-F]{6}", lambda m: LIGHT.get(m.group(0).lower(), m.group(0)), s)
-    open(dst, "w").write(out)
-    return unmapped
 
 
 # ---- keycaps
@@ -178,9 +164,9 @@ SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
 def rewrite_keys(d):
     for name, (ext, main) in KEYS.items():
         p = f"{d}/keycaps/{name}.svg"
-        s = open(p).read()
+        s = Path(p).read_text(encoding="utf-8")
         size = 13.5
-        w = measure(FONTS[("sans", True)], main, size)
+        w = measure(font_for("sans", True), main, size)
         if w > 62:
             size = round(13.5 * 62 / w, 2)
         new = (
@@ -189,20 +175,16 @@ def rewrite_keys(d):
         )
         s2 = re.sub(r'<text x="8" y="23".*?</text>\s*<text x="8" y="44".*?</text>', new, s, flags=re.S)
         assert s2 != s, name
-        open(p, "w").write(s2)
+        Path(p).write_text(s2, encoding="utf-8")
 
 
 if __name__ == "__main__":
     d, step = sys.argv[1], sys.argv[2]
     if step == "keys":
         rewrite_keys(d)
-    elif step == "light":
-        for src, dst in [("workbench/lift-tracker-card.svg", "workbench/lift-tracker-card-light.svg"),
-                         ("workbench/bit-vector-byte.svg", "workbench/bit-vector-byte-light.svg"),
-                         ("linked-list.svg", "linked-list-light.svg")]:
-            print(dst, "unmapped:", make_light(f"{d}/{src}", f"{d}/{dst}"))
     elif step == "outline":
         files = sys.argv[3:]
         for f in files:
             print(f, outline_file(f"{d}/{f}"), "texts")
         print("missing glyphs:", MISSING or "none")
+        sys.exit(bool(MISSING))

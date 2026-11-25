@@ -19,3 +19,9 @@ python3 -I tools/build.py
 ```
 
 3. Review `git diff assets/` and commit both the source template and regenerated asset.
+
+Set `PROFILE_FONT_ROOT` to use a different font directory with
+`inter/Inter.ttc`, `noto/NotoSansMono-Regular.ttf`, and
+`noto/NotoSansMono-Bold.ttf`. CI fetches and verifies the pinned font files.
+Run `python3 -I tools/build.py --check` to verify the committed outputs and
+local README image links.
