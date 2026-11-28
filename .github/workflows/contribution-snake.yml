@@ -128,7 +128,7 @@ jobs:
           Path("dist/stats.svg").write_text("\n".join(parts) + "\n", encoding="utf-8")
 
       - name: Outline stats text
-        run: python -I tools/gen.py assets outline dist/stats.svg
+        run: python -I tools/gen.py dist outline stats.svg
 
       - name: Publish the calendar images
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4
